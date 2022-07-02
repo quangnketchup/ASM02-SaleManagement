@@ -1,0 +1,17 @@
+C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\SalesManagement\ThuyCTP\ASM02Solution\DataAccess\bin\Debug\net6.0\DataAccess.deps.json
+C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\SalesManagement\ThuyCTP\ASM02Solution\DataAccess\bin\Debug\net6.0\DataAccess.runtimeconfig.json
+C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\SalesManagement\ThuyCTP\ASM02Solution\DataAccess\bin\Debug\net6.0\DataAccess.dll
+C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\SalesManagement\ThuyCTP\ASM02Solution\DataAccess\bin\Debug\net6.0\DataAccess.pdb
+C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\SalesManagement\ThuyCTP\ASM02Solution\DataAccess\bin\Debug\net6.0\BusinessObject.dll
+C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\SalesManagement\ThuyCTP\ASM02Solution\DataAccess\bin\Debug\net6.0\BusinessObject.pdb
+C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\SalesManagement\ThuyCTP\ASM02Solution\DataAccess\obj\Debug\net6.0\DataAccess.csproj.AssemblyReference.cache
+C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\SalesManagement\ThuyCTP\ASM02Solution\DataAccess\obj\Debug\net6.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\SalesManagement\ThuyCTP\ASM02Solution\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfoInputs.cache
+C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\SalesManagement\ThuyCTP\ASM02Solution\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfo.cs
+C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\SalesManagement\ThuyCTP\ASM02Solution\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\SalesManagement\ThuyCTP\ASM02Solution\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CopyComplete
+C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\SalesManagement\ThuyCTP\ASM02Solution\DataAccess\obj\Debug\net6.0\DataAccess.dll
+C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\SalesManagement\ThuyCTP\ASM02Solution\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
+C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\SalesManagement\ThuyCTP\ASM02Solution\DataAccess\obj\Debug\net6.0\DataAccess.pdb
+C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\SalesManagement\ThuyCTP\ASM02Solution\DataAccess\obj\Debug\net6.0\DataAccess.genruntimeconfig.cache
+C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\SalesManagement\ThuyCTP\ASM02Solution\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
