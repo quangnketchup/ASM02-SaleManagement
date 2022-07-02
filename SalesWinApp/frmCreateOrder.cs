@@ -25,10 +25,10 @@ namespace SalesWinApp
         {
             try
             {
-                var order = new OrderDetail
+                var order = new Order
                 {
                     OrderId = int.Parse(txtOrderID.Text),
-                    ProductId = int.Parse(txtProduct.Text),
+                    MemberId = int.Parse(txtMemberId.Text),
                     Freight = decimal.Parse(txtFreight.Text),
                     OrderDate = DateTime.Parse(mtbOrderDate.Text),
                     RequireDate = DateTime.Parse(mtbRequiredDate.Text),
