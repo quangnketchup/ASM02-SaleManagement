@@ -1,8 +1,10 @@
-﻿namespace SalesWinApp
+﻿using DataAccess.DataAccess;
+namespace SalesWinApp
 {
     public partial class frmMain : Form
     {
         public bool isAdmin { get; set; }
+        public Member loginMember { get; set; }
 
         public frmMain()
         {
@@ -13,7 +15,7 @@
         {
             if (!CheckExistForm("frmMemberManagements"))
             {
-                frmMemberManagements frm = new frmMemberManagements() { isAdmin = this.isAdmin };
+                frmMemberManagements frm = new frmMemberManagements() { isAdmin = this.isAdmin , loginMember= this.loginMember};
                 frm.MdiParent = this;
                 frm.Show();
             }

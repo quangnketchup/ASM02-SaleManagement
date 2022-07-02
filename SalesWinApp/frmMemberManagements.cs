@@ -16,6 +16,7 @@ namespace SalesWinApp
     public partial class frmMemberManagements : Form
     {
         public bool isAdmin { get; set; }
+        public Member loginMember { get; set; }
         IMemberRepository memberRepository = new MemberRepository();
         BindingSource source;
         public frmMemberManagements()
@@ -25,11 +26,11 @@ namespace SalesWinApp
 
         private void frmMemberManagement_Load(object sender, EventArgs e)
         {
-            isAdmin = true;
             if (isAdmin == false)
             {
                 btnDelete.Enabled = false;
                 btnNew.Enabled = false;
+                btnSearch.Enabled = false;
 
                 txtCity.Enabled = false;
                 txtCountry.Enabled = false;
@@ -42,7 +43,7 @@ namespace SalesWinApp
                 btnFind.Enabled = false;
                 cboFillterName.Enabled = false;
                 cboFillter.Enabled = false;
-                dgvMemberList.CellDoubleClick += null;
+                dgvMemberList.CellDoubleClick += DgvMemberList_CellDoubleClick;
             }
             else
             {
@@ -54,9 +55,6 @@ namespace SalesWinApp
         private void DgvMemberList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             frmMemberDetails frmMemberDetails = new frmMemberDetails
-
-
-
             {
                 Text = "Update member",
                 InsertOrUpdate = true,
@@ -107,14 +105,20 @@ namespace SalesWinApp
 
         public void LoadMemberList()
         {
-            var members = memberRepository.GetMembers();
-
+            var members = memberRepository.GetMembers();           
             try
             {
-                //The BindingSource omponent is designed to simplify
-                //the process of binding controls to an underlying data source
+
                 source = new BindingSource();
-                source.DataSource = members.OrderByDescending(member => member.CompanyName);
+                if (isAdmin == false)
+                {
+                    Member mem = members.SingleOrDefault(m => m.MemberId == loginMember.MemberId);
+                    source.DataSource = mem;
+                }
+                else
+                {
+                    source.DataSource = members.OrderByDescending(member => member.CompanyName);
+                }
                 txtMemberID.DataBindings.Clear();
                 txtCompanyName.DataBindings.Clear();
                 txtPassword.DataBindings.Clear();
@@ -271,7 +275,7 @@ namespace SalesWinApp
         private void cboFillter_SelectCity(object sender, EventArgs e)
         {
             cboFillter.Text = cboFillter.GetItemText(cboFillter.SelectedItem);
-            if (cboFillter.Text.Equals("American"))
+            if (cboFillter.Text.Equals("United State"))
             {
                 cboFillterName.SelectedIndex = -1;
                 cboFillterName.Items.Clear();

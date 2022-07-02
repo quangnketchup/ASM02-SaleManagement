@@ -70,7 +70,7 @@ namespace DataAccess
             try
             {
                 using var context = new AssignmentContext();
-                mem = context.Members.SingleOrDefault(c=>c.MemberId==MemberID);
+                mem = context.Members.SingleOrDefault(m=>m.MemberId==MemberID);
             }
             catch (Exception e)
             {

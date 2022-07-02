@@ -62,6 +62,7 @@
             this.cboCountry.Name = "cboCountry";
             this.cboCountry.Size = new System.Drawing.Size(290, 28);
             this.cboCountry.TabIndex = 45;
+            this.cboCountry.SelectionChangeCommitted += new System.EventHandler(this.cboFillter_SelectCity);
             this.cboCountry.Click += new System.EventHandler(this.cboFillter_SelectCity);
             // 
             // btnCancel

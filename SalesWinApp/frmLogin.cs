@@ -59,7 +59,8 @@ namespace SalesWinApp
                 {
                     frmMain frm = new frmMain()
                     {
-                        isAdmin = false
+                        isAdmin = false,
+                        loginMember = i,
                     };
                     frm.ShowDialog();
                     isMem = true;

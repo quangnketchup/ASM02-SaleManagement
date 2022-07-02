@@ -138,7 +138,7 @@
             this.cboFillter.FormattingEnabled = true;
             this.cboFillter.Items.AddRange(new object[] {
             "Viet Nam",
-            "American"});
+            "United State"});
             this.cboFillter.Location = new System.Drawing.Point(507, 212);
             this.cboFillter.Name = "cboFillter";
             this.cboFillter.Size = new System.Drawing.Size(151, 28);
