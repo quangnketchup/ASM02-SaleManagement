@@ -11,5 +11,6 @@ namespace DataAccess.DataAccess
         public string Weight { get; set; } = null!;
         public decimal UnitPrice { get; set; }
         public int UnitslnStock { get; set; }
+        public int Status { get; set; }
     }
 }

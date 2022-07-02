@@ -9,12 +9,15 @@ namespace DataAccess.Repository
 {
     public class ProductRepository : IProductRepository
     {
-        public IEnumerable<Product> GetProducts() => ProductDAO.Instance.GetProductList();
-        public Product GetProductByID(int ProductID) => ProductDAO.Instance.GetProductByID(ProductID);
-        public void InsertProduct(Product Product) => ProductDAO.Instance.AddNew(Product);
-        public void DeleteProduct(int ProductID) => ProductDAO.Instance.Remove(ProductID);
-        public void UpdateProduct(Product Product) => ProductDAO.Instance.Update(Product);
-        public List<Product> GetProductByUnitPriceAndUnitInStock(int a, int b) => ProductDAO.Instance.Filter(a, b);
-        
+        public IEnumerable<Product> GetFilteredProducts(string tag) => ProductDAO.Instance.GetFilteredProduct(tag);
+        public Product GetProductById(int productId) => ProductDAO.Instance.getProductByID(productId);
+
+        public IEnumerable<Product> GetProducts() => ProductDAO.Instance.getProductList();
+
+        public void InsertProduct(Product product) => ProductDAO.Instance.addNewProduct(product);
+
+        public void RemoveProduct(int productId) => ProductDAO.Instance.removeProduct(productId);
+
+        public void UpdateProduct(Product product) => ProductDAO.Instance.updateProduct(product);
     }
 }

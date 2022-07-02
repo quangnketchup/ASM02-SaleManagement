@@ -10,10 +10,10 @@ namespace DataAccess.Repository
     public interface IProductRepository
     {
         IEnumerable<Product> GetProducts();
-        Product GetProductByID(int ProductID);
-        void InsertProduct(Product Product);
-        void DeleteProduct(int ProductID);
-        void UpdateProduct(Product Product);
-        List<Product> GetProductByUnitPriceAndUnitInStock(int a, int b);
+        IEnumerable<Product> GetFilteredProducts(String tag);
+        Product GetProductById(int productId);
+        void InsertProduct(Product product);
+        void UpdateProduct(Product product);
+        void RemoveProduct(int productId);
     }
 }

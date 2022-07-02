@@ -1,13 +1,19 @@
 ﻿using DataAccess.DataAccess;
+using DataAccess.Repository;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DataAccess
 {
     public class ProductDAO
     {
-        //Using Singleton Pattern
+        //-----------------------
+        //using singleton
         private static ProductDAO instance = null;
         private static readonly object instanceLock = new object();
         private ProductDAO() { }
@@ -26,48 +32,49 @@ namespace DataAccess
             }
         }
 
-        public IEnumerable<Product> GetProductList()
+        //-----------------------
+        public IEnumerable<Product> getProductList()
         {
-            var members = new List<Product>();
+            var products = new List<Product>();
             try
             {
                 using var context = new AssignmentContext();
-                members = context.Products.ToList();
+                products = context.Products.ToList();
             }
             catch (Exception e)
             {
                 throw new Exception(e.Message);
             }
-            return members;
-
+            return products;
         }
 
-        public Product GetProductByID(int ProductID)
+
+        //-----------------------
+        public Product getProductByID(int ProductId)
         {
-            Product mem = null;
+            Product product = null;
             try
             {
                 using var context = new AssignmentContext();
-                mem = context.Products.SingleOrDefault(c=>c.ProductId == ProductID);
+                product = context.Products.SingleOrDefault(c => c.ProductId == ProductId);
             }
             catch (Exception e)
             {
                 throw new Exception(e.Message);
             }
-            return mem;
+            return product;
         }
 
-        //-----------------------------------------------------------------
-        //Add a new member
-        public void AddNew(Product Product)
+        //-----------------------
+        public void addNewProduct(Product product)
         {
             try
             {
-                Product mem = GetProductByID(Product.ProductId);
-                if (mem == null)
+                Product pro = getProductByID(product.ProductId);
+                if (pro == null)
                 {
                     using var context = new AssignmentContext();
-                    context.Products.Add(Product);
+                    context.Products.Add(product);
                     context.SaveChanges();
                 }
                 else
@@ -80,17 +87,17 @@ namespace DataAccess
                 throw new Exception(e.Message);
             }
         }
-        //-----------------------------------------------------------------
-        //Add a new member
-        public void Update(Product Product)
+
+        //-----------------------
+        public void updateProduct(Product product)
         {
             try
             {
-                Product mem = GetProductByID(Product.ProductId);
-                if (mem != null)
+                Product pro = getProductByID(product.ProductId);
+                if (pro == null)
                 {
                     using var context = new AssignmentContext();
-                    context.Products.Update(Product);
+                    context.Products.Update(product);
                     context.SaveChanges();
                 }
                 else
@@ -104,22 +111,21 @@ namespace DataAccess
             }
         }
 
-        //-----------------------------------------------------------------
-        //Add a new member
-        public void Remove(int ProductId)
+        //-------------------------God help me
+        public void removeProduct(int productId)
         {
             try
             {
-                Product mem = GetProductByID(ProductId);
-                if (mem != null)
+                Product pro = getProductByID(productId);
+                if (pro == null)
                 {
                     using var context = new AssignmentContext();
-                    context.Products.Remove(mem);
+                    context.Products.Remove(pro);
                     context.SaveChanges();
                 }
                 else
                 {
-                    throw new Exception("The product does not already exist.");
+                    throw new Exception("The member does not already exist.");
                 }
             }
             catch (Exception e)
@@ -127,20 +133,26 @@ namespace DataAccess
                 throw new Exception(e.Message);
             }
         }
-        public List<Product> Filter(int a, int b)
-        {
-            var members = new List<Product>();
-            try
-            {
-                using var context = new AssignmentContext();
-                members = context.Products.ToList();
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.Message);
-            }
-            return members;
 
+        //filter the product list
+        public List<Product> GetFilteredProduct(String tag)
+        {
+            List<Product> filtered = new List<Product>();
+            foreach (Product product in getProductList())
+            {
+                int add = 0;
+                if (product.ProductId.ToString().Contains(tag))
+                    add = 1;
+                if (product.ProductName.Contains(tag))
+                    add = 1;
+                if (product.UnitPrice.ToString().Contains(tag))
+                    add = 1;
+                if (product.UnitslnStock.ToString().Contains(tag))
+                    add = 1;
+                if (add == 1)
+                    filtered.Add(product);
+            }
+            return filtered;
         }
     }
 }
