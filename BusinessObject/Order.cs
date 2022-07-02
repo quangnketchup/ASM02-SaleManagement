@@ -16,3 +16,4 @@ namespace DataAccess.DataAccess
         public virtual Member Member { get; set; } = null!;
     }
 }
+
