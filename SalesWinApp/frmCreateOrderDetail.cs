@@ -12,10 +12,7 @@ namespace SalesWinApp
             InitializeComponent();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void btnClose_Click(object sender, EventArgs e) => Close();
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -28,7 +25,7 @@ namespace SalesWinApp
                     UnitPrice = decimal.Parse(txtUnitPrice.Text),
                     Quantity = int.Parse(txtQuantity.Text),
                     Discount = float.Parse(txtDiscount.Text),
-                    Status = 1
+                    Status = 1,
                 };
                 if (InsertOrUpdate == false)
                 {
@@ -47,7 +44,16 @@ namespace SalesWinApp
 
         private void frmCreateOrderDetail_Load(object sender, EventArgs e)
         {
-
+            txtOrderID.Enabled = !InsertOrUpdate;
+            txtProductID.Enabled = !InsertOrUpdate;
+            if (InsertOrUpdate == true)
+            {
+                txtOrderID.Text = OrderDetailInfor.OrderId.ToString();
+                txtDiscount.Text = OrderDetailInfor.Discount.ToString();
+                txtProduct.Text = OrderDetailInfor.ProductId.ToString();
+                txtQuantity.Text = OrderDetailInfor.Quantity.ToString();
+                txtUnitPrice.Text = OrderDetailInfor.UnitPrice.ToString();
+            }
         }
     }
 }

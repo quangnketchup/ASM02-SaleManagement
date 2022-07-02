@@ -28,7 +28,7 @@ namespace SalesWinApp
 
         private void frmOrderDetails_Load(object sender, EventArgs e)
         {
-            if(isAdmin == true)
+            if(isAdmin == false)
             {
                 btnDelete.Enabled = false;
                 btnCreate.Enabled = false;
@@ -186,6 +186,11 @@ namespace SalesWinApp
             {
                 MessageBox.Show(ex.Message, "Delete a orderDetail");
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

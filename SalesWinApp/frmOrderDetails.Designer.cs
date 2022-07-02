@@ -45,6 +45,7 @@
             this.btnLoad = new System.Windows.Forms.Button();
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.lbStatus = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderDetail)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,7 +124,7 @@
             // dgvOrderDetail
             // 
             this.dgvOrderDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrderDetail.Location = new System.Drawing.Point(71, 812);
+            this.dgvOrderDetail.Location = new System.Drawing.Point(50, 733);
             this.dgvOrderDetail.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.dgvOrderDetail.Name = "dgvOrderDetail";
             this.dgvOrderDetail.RowHeadersWidth = 51;
@@ -212,11 +213,22 @@
             this.lbStatus.TabIndex = 30;
             this.lbStatus.Text = "Status";
             // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(876, 1178);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(188, 58);
+            this.btnClose.TabIndex = 31;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // frmOrderDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1918, 1291);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lbStatus);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.btnLoad);
@@ -262,5 +274,6 @@
         private Button btnLoad;
         private TextBox txtStatus;
         private Label lbStatus;
+        private Button btnClose;
     }
 }
