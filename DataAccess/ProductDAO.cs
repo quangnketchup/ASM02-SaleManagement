@@ -117,7 +117,7 @@ namespace DataAccess
             try
             {
                 Product pro = getProductByID(productId);
-                if (pro == null)
+                if (pro != null)
                 {
                     using var context = new AssignmentContext();
                     context.Products.Remove(pro);
@@ -125,7 +125,7 @@ namespace DataAccess
                 }
                 else
                 {
-                    throw new Exception("The member does not already exist.");
+                    throw new Exception("The product does not already exist.");
                 }
             }
             catch (Exception e)
