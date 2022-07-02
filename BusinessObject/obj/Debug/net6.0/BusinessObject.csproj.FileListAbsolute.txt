@@ -13,7 +13,6 @@ C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\Sa
 C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\SalesManagement\ThuyCTP\ASM02Solution\BusinessObject\obj\Debug\net6.0\BusinessObject.genruntimeconfig.cache
 C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\SalesManagement\ThuyCTP\ASM02Solution\BusinessObject\obj\Debug\net6.0\ref\BusinessObject.dll
 D:\New folder\SWP391\ASM02-SaleManagement\BusinessObject\bin\Debug\net6.0\BusinessObject.deps.json
-D:\New folder\SWP391\ASM02-SaleManagement\BusinessObject\bin\Debug\net6.0\BusinessObject.runtimeconfig.json
 D:\New folder\SWP391\ASM02-SaleManagement\BusinessObject\bin\Debug\net6.0\BusinessObject.dll
 D:\New folder\SWP391\ASM02-SaleManagement\BusinessObject\bin\Debug\net6.0\BusinessObject.pdb
 D:\New folder\SWP391\ASM02-SaleManagement\BusinessObject\obj\Debug\net6.0\BusinessObject.csproj.AssemblyReference.cache
@@ -24,7 +23,6 @@ D:\New folder\SWP391\ASM02-SaleManagement\BusinessObject\obj\Debug\net6.0\Busine
 D:\New folder\SWP391\ASM02-SaleManagement\BusinessObject\obj\Debug\net6.0\BusinessObject.dll
 D:\New folder\SWP391\ASM02-SaleManagement\BusinessObject\obj\Debug\net6.0\refint\BusinessObject.dll
 D:\New folder\SWP391\ASM02-SaleManagement\BusinessObject\obj\Debug\net6.0\BusinessObject.pdb
-D:\New folder\SWP391\ASM02-SaleManagement\BusinessObject\obj\Debug\net6.0\BusinessObject.genruntimeconfig.cache
 D:\New folder\SWP391\ASM02-SaleManagement\BusinessObject\obj\Debug\net6.0\ref\BusinessObject.dll
 C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\BusinessObject\bin\Debug\net6.0\BusinessObject.deps.json
 C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\BusinessObject\bin\Debug\net6.0\BusinessObject.runtimeconfig.json
