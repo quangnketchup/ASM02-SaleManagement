@@ -52,7 +52,7 @@ namespace SalesWinApp
         {
             frmCreateOrderDetail frmCreateOrderDetail = new frmCreateOrderDetail
             {
-                Text = "Update member",
+                Text = "Update order",
                 InsertOrUpdate = true,
                 OrderDetailInfor = GetOrderDetailObject(),
                 OrderDetailRepository = orderDetailRepository,
@@ -142,6 +142,7 @@ namespace SalesWinApp
                     UnitPrice = decimal.Parse(txtUnitPrice.Text),
                     Quantity = int.Parse(txtQuantity.Text),
                     Discount = double.Parse(txtDiscount.Text),
+                    Status = int.Parse(txtStatus.Text),
                 };
             }
             catch (Exception ex)
@@ -184,7 +185,5 @@ namespace SalesWinApp
                 MessageBox.Show(ex.Message, "Delete a orderDetail");
             }
         }
-
-        
     }
 }

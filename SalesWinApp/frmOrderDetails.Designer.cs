@@ -43,12 +43,14 @@
             this.txtOrderID = new System.Windows.Forms.TextBox();
             this.txtProductID = new System.Windows.Forms.TextBox();
             this.btnLoad = new System.Windows.Forms.Button();
+            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.lbStatus = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderDetail)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(530, 973);
+            this.btnDelete.Location = new System.Drawing.Point(1112, 654);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(182, 63);
@@ -59,7 +61,7 @@
             // 
             // btnCreate
             // 
-            this.btnCreate.Location = new System.Drawing.Point(32, 973);
+            this.btnCreate.Location = new System.Drawing.Point(614, 654);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(182, 63);
@@ -71,7 +73,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(32, 779);
+            this.label5.Location = new System.Drawing.Point(932, 372);
             this.label5.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(135, 41);
@@ -81,7 +83,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 642);
+            this.label4.Location = new System.Drawing.Point(932, 235);
             this.label4.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(132, 41);
@@ -121,18 +123,18 @@
             // dgvOrderDetail
             // 
             this.dgvOrderDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrderDetail.Location = new System.Drawing.Point(826, 63);
+            this.dgvOrderDetail.Location = new System.Drawing.Point(71, 812);
             this.dgvOrderDetail.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.dgvOrderDetail.Name = "dgvOrderDetail";
             this.dgvOrderDetail.RowHeadersWidth = 51;
             this.dgvOrderDetail.RowTemplate.Height = 25;
-            this.dgvOrderDetail.Size = new System.Drawing.Size(1061, 1164);
+            this.dgvOrderDetail.Size = new System.Drawing.Size(1816, 415);
             this.dgvOrderDetail.TabIndex = 19;
             this.dgvOrderDetail.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrderDetail_CellContentClick);
             // 
             // txtDiscount
             // 
-            this.txtDiscount.Location = new System.Drawing.Point(268, 771);
+            this.txtDiscount.Location = new System.Drawing.Point(1168, 364);
             this.txtDiscount.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.ReadOnly = true;
@@ -141,7 +143,7 @@
             // 
             // txtQuantity
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(268, 634);
+            this.txtQuantity.Location = new System.Drawing.Point(1168, 227);
             this.txtQuantity.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.ReadOnly = true;
@@ -177,7 +179,7 @@
             // 
             // txtProductID
             // 
-            this.txtProductID.Location = new System.Drawing.Point(268, 771);
+            this.txtProductID.Location = new System.Drawing.Point(1168, 364);
             this.txtProductID.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.txtProductID.Name = "txtProductID";
             this.txtProductID.Size = new System.Drawing.Size(237, 47);
@@ -185,7 +187,7 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(281, 975);
+            this.btnLoad.Location = new System.Drawing.Point(863, 656);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(188, 58);
             this.btnLoad.TabIndex = 28;
@@ -193,11 +195,30 @@
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
+            // txtStatus
+            // 
+            this.txtStatus.BackColor = System.Drawing.SystemColors.Control;
+            this.txtStatus.Location = new System.Drawing.Point(1168, 497);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(439, 47);
+            this.txtStatus.TabIndex = 29;
+            // 
+            // lbStatus
+            // 
+            this.lbStatus.AutoSize = true;
+            this.lbStatus.Location = new System.Drawing.Point(932, 503);
+            this.lbStatus.Name = "lbStatus";
+            this.lbStatus.Size = new System.Drawing.Size(98, 41);
+            this.lbStatus.TabIndex = 30;
+            this.lbStatus.Text = "Status";
+            // 
             // frmOrderDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1918, 1291);
+            this.Controls.Add(this.lbStatus);
+            this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnCreate);
@@ -239,5 +260,7 @@
         private TextBox txtOrderID;
         private TextBox txtProductID;
         private Button btnLoad;
+        private TextBox txtStatus;
+        private Label lbStatus;
     }
 }
