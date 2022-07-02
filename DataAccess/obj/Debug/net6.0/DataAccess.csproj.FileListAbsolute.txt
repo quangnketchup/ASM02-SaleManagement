@@ -15,3 +15,20 @@ C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\Sa
 C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\SalesManagement\ThuyCTP\ASM02Solution\DataAccess\obj\Debug\net6.0\DataAccess.pdb
 C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\SalesManagement\ThuyCTP\ASM02Solution\DataAccess\obj\Debug\net6.0\DataAccess.genruntimeconfig.cache
 C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\SalesManagement\ThuyCTP\ASM02Solution\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
+E:\TaiLieuCN\CN5\PRN211\SourceCode\Member\Sale\ASM02-SaleManagement\DataAccess\bin\Debug\net6.0\DataAccess.deps.json
+E:\TaiLieuCN\CN5\PRN211\SourceCode\Member\Sale\ASM02-SaleManagement\DataAccess\bin\Debug\net6.0\DataAccess.runtimeconfig.json
+E:\TaiLieuCN\CN5\PRN211\SourceCode\Member\Sale\ASM02-SaleManagement\DataAccess\bin\Debug\net6.0\DataAccess.dll
+E:\TaiLieuCN\CN5\PRN211\SourceCode\Member\Sale\ASM02-SaleManagement\DataAccess\bin\Debug\net6.0\DataAccess.pdb
+E:\TaiLieuCN\CN5\PRN211\SourceCode\Member\Sale\ASM02-SaleManagement\DataAccess\bin\Debug\net6.0\BusinessObject.dll
+E:\TaiLieuCN\CN5\PRN211\SourceCode\Member\Sale\ASM02-SaleManagement\DataAccess\bin\Debug\net6.0\BusinessObject.pdb
+E:\TaiLieuCN\CN5\PRN211\SourceCode\Member\Sale\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\DataAccess.csproj.AssemblyReference.cache
+E:\TaiLieuCN\CN5\PRN211\SourceCode\Member\Sale\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+E:\TaiLieuCN\CN5\PRN211\SourceCode\Member\Sale\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfoInputs.cache
+E:\TaiLieuCN\CN5\PRN211\SourceCode\Member\Sale\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfo.cs
+E:\TaiLieuCN\CN5\PRN211\SourceCode\Member\Sale\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CoreCompileInputs.cache
+E:\TaiLieuCN\CN5\PRN211\SourceCode\Member\Sale\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CopyComplete
+E:\TaiLieuCN\CN5\PRN211\SourceCode\Member\Sale\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\DataAccess.dll
+E:\TaiLieuCN\CN5\PRN211\SourceCode\Member\Sale\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
+E:\TaiLieuCN\CN5\PRN211\SourceCode\Member\Sale\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\DataAccess.pdb
+E:\TaiLieuCN\CN5\PRN211\SourceCode\Member\Sale\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\DataAccess.genruntimeconfig.cache
+E:\TaiLieuCN\CN5\PRN211\SourceCode\Member\Sale\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
