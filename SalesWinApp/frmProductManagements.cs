@@ -107,7 +107,7 @@ namespace SalesWinApp
                 txtProductName.DataBindings.Add("Text", Source, "ProductName");
                 txtWeight.DataBindings.Add("Text", Source, "Weight");
                 txtUnitPrice.DataBindings.Add("Text", Source, "UnitPrice");
-                txtUnitInStock.DataBindings.Add("Text", Source, "UnitInStock");
+                txtUnitInStock.DataBindings.Add("Text", Source, "UnitslnStock");
                 txtStatus.DataBindings.Add("Text", Source, "Status");
 
                 dgvProductList.DataSource = null;
@@ -191,7 +191,7 @@ namespace SalesWinApp
                 txtProductName.DataBindings.Add("Text", Source, "ProductName");
                 txtWeight.DataBindings.Add("Text", Source, "Weight");
                 txtUnitPrice.DataBindings.Add("Text", Source, "UnitPrice");
-                txtUnitInStock.DataBindings.Add("Text", Source, "UnitInStock");
+                txtUnitInStock.DataBindings.Add("Text", Source, "UnitslnStock");
 
                 dgvProductList.DataSource = null;
                 dgvProductList.DataSource = Source;
