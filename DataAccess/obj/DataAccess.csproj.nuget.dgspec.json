@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\SEMESTER\\ky5\\Học chống rớt\\PRN211\\2_PRN211\\2_PRN211\\Assignments\\ASM2\\SalesManagement\\ThuyCTP\\ASM02Solution\\DataAccess\\DataAccess.csproj": {}
+    "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\SEMESTER\\ky5\\Học chống rớt\\PRN211\\2_PRN211\\2_PRN211\\Assignments\\ASM2\\SalesManagement\\ThuyCTP\\ASM02Solution\\BusinessObject\\BusinessObject.csproj": {
+    "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\SEMESTER\\ky5\\Học chống rớt\\PRN211\\2_PRN211\\2_PRN211\\Assignments\\ASM2\\SalesManagement\\ThuyCTP\\ASM02Solution\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "C:\\SEMESTER\\ky5\\Học chống rớt\\PRN211\\2_PRN211\\2_PRN211\\Assignments\\ASM2\\SalesManagement\\ThuyCTP\\ASM02Solution\\BusinessObject\\BusinessObject.csproj",
-        "packagesPath": "C:\\Users\\quang\\.nuget\\packages\\",
-        "outputPath": "C:\\SEMESTER\\ky5\\Học chống rớt\\PRN211\\2_PRN211\\2_PRN211\\Assignments\\ASM2\\SalesManagement\\ThuyCTP\\ASM02Solution\\BusinessObject\\obj\\",
+        "projectPath": "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\BusinessObject\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\cao thi phuong thuy\\.nuget\\packages\\",
+        "outputPath": "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\quang\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\cao thi phuong thuy\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,8 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.telerik.com/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -83,25 +78,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\SEMESTER\\ky5\\Học chống rớt\\PRN211\\2_PRN211\\2_PRN211\\Assignments\\ASM2\\SalesManagement\\ThuyCTP\\ASM02Solution\\DataAccess\\DataAccess.csproj": {
+    "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\SEMESTER\\ky5\\Học chống rớt\\PRN211\\2_PRN211\\2_PRN211\\Assignments\\ASM2\\SalesManagement\\ThuyCTP\\ASM02Solution\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\SEMESTER\\ky5\\Học chống rớt\\PRN211\\2_PRN211\\2_PRN211\\Assignments\\ASM2\\SalesManagement\\ThuyCTP\\ASM02Solution\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\quang\\.nuget\\packages\\",
-        "outputPath": "C:\\SEMESTER\\ky5\\Học chống rớt\\PRN211\\2_PRN211\\2_PRN211\\Assignments\\ASM2\\SalesManagement\\ThuyCTP\\ASM02Solution\\DataAccess\\obj\\",
+        "projectPath": "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\cao thi phuong thuy\\.nuget\\packages\\",
+        "outputPath": "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\quang\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\cao thi phuong thuy\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -109,15 +100,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.telerik.com/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\SEMESTER\\ky5\\Học chống rớt\\PRN211\\2_PRN211\\2_PRN211\\Assignments\\ASM2\\SalesManagement\\ThuyCTP\\ASM02Solution\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "C:\\SEMESTER\\ky5\\Học chống rớt\\PRN211\\2_PRN211\\2_PRN211\\Assignments\\ASM2\\SalesManagement\\ThuyCTP\\ASM02Solution\\BusinessObject\\BusinessObject.csproj"
+              "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\BusinessObject\\BusinessObject.csproj"
               }
             }
           }
@@ -170,7 +160,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
