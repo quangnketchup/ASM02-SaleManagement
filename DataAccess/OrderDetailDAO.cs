@@ -104,17 +104,42 @@ namespace DataAccess
             }
         }
 
-        //-----------------------------------------------------------------
-        //Add a new member
-        public void Remove(int OrderId, int ProductId)
+        public void Remove2(int OrderId, int ProductId)
         {
             try
             {
                 OrderDetail mem = GetOrderDetailByID(OrderId, ProductId);
                 if (mem != null)
                 {
+                    using (AssignmentContext db = new AssignmentContext())
+                    {
+                        OrderDetail orderdetail = db.OrderDetails.Where(d => d.OrderId == OrderId).First();
+                        orderdetail.Status = 0;
+                        db.SaveChanges();
+                    }
+                }
+                else
+                {
+                    throw new Exception("The member does not already exist.");
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        //-----------------------------------------------------------------
+        //Add a new member
+        public void Remove(int OrderId, int ProductId)
+        {
+            try
+            {
+                OrderDetail orderDetail = GetOrderDetailByID(OrderId, ProductId);
+                if (orderDetail != null)
+                {
                     using var context = new AssignmentContext();
-                    context.OrderDetails.Remove(mem);
+                    context.OrderDetails.Remove(orderDetail);
                     context.SaveChanges();
                 }
                 else
