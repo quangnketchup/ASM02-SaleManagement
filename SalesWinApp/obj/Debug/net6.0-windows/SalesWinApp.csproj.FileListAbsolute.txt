@@ -130,3 +130,22 @@ D:\New folder\SWP391\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\r
 D:\New folder\SWP391\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.pdb
 D:\New folder\SWP391\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.genruntimeconfig.cache
 D:\New folder\SWP391\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\ref\SalesWinApp.dll
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.csproj.AssemblyReference.cache
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmCreateOrder.resources
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmCreateOrderDetail.resources
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmLogin.resources
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmMain.resources
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmMemberDetails.resources
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmMemberManagements.resources
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmOrderDetails.resources
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmOrderManagements.resources
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmProductDetails.resources
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmProductManagements.resources
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.csproj.GenerateResource.cache
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.AssemblyInfoInputs.cache
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.AssemblyInfo.cs
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.csproj.CoreCompileInputs.cache
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.dll
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\refint\SalesWinApp.dll
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.pdb

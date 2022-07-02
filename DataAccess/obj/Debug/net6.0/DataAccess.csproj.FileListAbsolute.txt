@@ -32,3 +32,20 @@ D:\New folder\SWP391\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\refint\Dat
 D:\New folder\SWP391\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\DataAccess.pdb
 D:\New folder\SWP391\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\DataAccess.genruntimeconfig.cache
 D:\New folder\SWP391\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\DataAccess\bin\Debug\net6.0\DataAccess.deps.json
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\DataAccess\bin\Debug\net6.0\DataAccess.runtimeconfig.json
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\DataAccess\bin\Debug\net6.0\DataAccess.dll
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\DataAccess\bin\Debug\net6.0\DataAccess.pdb
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\DataAccess\bin\Debug\net6.0\BusinessObject.dll
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\DataAccess\bin\Debug\net6.0\BusinessObject.pdb
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfo.cs
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CopyComplete
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\DataAccess.dll
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\DataAccess.pdb
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\DataAccess.genruntimeconfig.cache
+C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
