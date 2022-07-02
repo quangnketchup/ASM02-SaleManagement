@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t86MTfdbhtaE2+FsRv0BkZ01c3Spljk+eQnrYTdn9YeF86sGBncyf4ZpZwP9vE+6zOwvsAM7UzXUwXacVyCSpw==",
+  "dgSpecHash": "bIRJQOwrMIVf0HMo6v5RHjONApbu5aBkh4ZwdTwZzAj3+8UW+ruWmOoPtM0YrQciB5VOzg01/CZ42Najk5zW7A==",
   "success": true,
-  "projectFilePath": "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\BusinessObject\\BusinessObject.csproj",
+  "projectFilePath": "D:\\asm02v2\\BusinessObject\\BusinessObject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cao thi phuong thuy\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\cao thi phuong thuy\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

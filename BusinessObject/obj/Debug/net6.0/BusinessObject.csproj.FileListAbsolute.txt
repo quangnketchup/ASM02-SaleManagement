@@ -26,3 +26,17 @@ E:\TaiLieuCN\CN5\PRN211\SourceCode\Member\Sale\ASM02-SaleManagement\BusinessObje
 E:\TaiLieuCN\CN5\PRN211\SourceCode\Member\Sale\ASM02-SaleManagement\BusinessObject\obj\Debug\net6.0\BusinessObject.pdb
 E:\TaiLieuCN\CN5\PRN211\SourceCode\Member\Sale\ASM02-SaleManagement\BusinessObject\obj\Debug\net6.0\BusinessObject.genruntimeconfig.cache
 E:\TaiLieuCN\CN5\PRN211\SourceCode\Member\Sale\ASM02-SaleManagement\BusinessObject\obj\Debug\net6.0\ref\BusinessObject.dll
+D:\asm02v2\BusinessObject\bin\Debug\net6.0\BusinessObject.deps.json
+D:\asm02v2\BusinessObject\bin\Debug\net6.0\BusinessObject.runtimeconfig.json
+D:\asm02v2\BusinessObject\bin\Debug\net6.0\BusinessObject.dll
+D:\asm02v2\BusinessObject\bin\Debug\net6.0\BusinessObject.pdb
+D:\asm02v2\BusinessObject\obj\Debug\net6.0\BusinessObject.csproj.AssemblyReference.cache
+D:\asm02v2\BusinessObject\obj\Debug\net6.0\BusinessObject.GeneratedMSBuildEditorConfig.editorconfig
+D:\asm02v2\BusinessObject\obj\Debug\net6.0\BusinessObject.AssemblyInfoInputs.cache
+D:\asm02v2\BusinessObject\obj\Debug\net6.0\BusinessObject.AssemblyInfo.cs
+D:\asm02v2\BusinessObject\obj\Debug\net6.0\BusinessObject.csproj.CoreCompileInputs.cache
+D:\asm02v2\BusinessObject\obj\Debug\net6.0\BusinessObject.dll
+D:\asm02v2\BusinessObject\obj\Debug\net6.0\refint\BusinessObject.dll
+D:\asm02v2\BusinessObject\obj\Debug\net6.0\BusinessObject.pdb
+D:\asm02v2\BusinessObject\obj\Debug\net6.0\BusinessObject.genruntimeconfig.cache
+D:\asm02v2\BusinessObject\obj\Debug\net6.0\ref\BusinessObject.dll

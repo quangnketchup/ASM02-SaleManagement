@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gX499ebMIZajdj7Pd/2djv5YTrmsOgLnQxjb++OFIXd2FduKE1FCOvktz4CME/KY3DuGNdHAnKc7IiLIwMlmPg==",
+  "dgSpecHash": "wcTGkfHm+IJboc6W5/nnDDnqUPxGDZhGKUttjLoSE+LHg1vEAY+TycapWdGHN/sQ0Z/67vBALXDgxJV/oB4UMQ==",
   "success": true,
-  "projectFilePath": "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\DataAccess\\DataAccess.csproj",
+  "projectFilePath": "D:\\asm02v2\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cao thi phuong thuy\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\cao thi phuong thuy\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

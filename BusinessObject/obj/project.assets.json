@@ -2170,11 +2170,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\BusinessObject\\BusinessObject.csproj",
+      "projectUniqueName": "D:\\asm02v2\\BusinessObject\\BusinessObject.csproj",
       "projectName": "BusinessObject",
-      "projectPath": "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\BusinessObject\\BusinessObject.csproj",
+      "projectPath": "D:\\asm02v2\\BusinessObject\\BusinessObject.csproj",
       "packagesPath": "C:\\Users\\cao thi phuong thuy\\.nuget\\packages\\",
-      "outputPath": "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\BusinessObject\\obj\\",
+      "outputPath": "D:\\asm02v2\\BusinessObject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\cao thi phuong thuy\\AppData\\Roaming\\NuGet\\NuGet.Config",

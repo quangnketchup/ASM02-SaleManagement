@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\SalesWinApp\\SalesWinApp.csproj": {}
+    "D:\\asm02v2\\SalesWinApp\\SalesWinApp.csproj": {}
   },
   "projects": {
-    "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\BusinessObject\\BusinessObject.csproj": {
+    "D:\\asm02v2\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "D:\\asm02v2\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\BusinessObject\\BusinessObject.csproj",
+        "projectPath": "D:\\asm02v2\\BusinessObject\\BusinessObject.csproj",
         "packagesPath": "C:\\Users\\cao thi phuong thuy\\.nuget\\packages\\",
-        "outputPath": "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\BusinessObject\\obj\\",
+        "outputPath": "D:\\asm02v2\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\cao thi phuong thuy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,14 +82,14 @@
         }
       }
     },
-    "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\DataAccess\\DataAccess.csproj": {
+    "D:\\asm02v2\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "D:\\asm02v2\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\DataAccess\\DataAccess.csproj",
+        "projectPath": "D:\\asm02v2\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\cao thi phuong thuy\\.nuget\\packages\\",
-        "outputPath": "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\DataAccess\\obj\\",
+        "outputPath": "D:\\asm02v2\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\cao thi phuong thuy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -106,8 +106,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\BusinessObject\\BusinessObject.csproj"
+              "D:\\asm02v2\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "D:\\asm02v2\\BusinessObject\\BusinessObject.csproj"
               }
             }
           }
@@ -164,14 +164,14 @@
         }
       }
     },
-    "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\SalesWinApp\\SalesWinApp.csproj": {
+    "D:\\asm02v2\\SalesWinApp\\SalesWinApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\SalesWinApp\\SalesWinApp.csproj",
+        "projectUniqueName": "D:\\asm02v2\\SalesWinApp\\SalesWinApp.csproj",
         "projectName": "SalesWinApp",
-        "projectPath": "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\SalesWinApp\\SalesWinApp.csproj",
+        "projectPath": "D:\\asm02v2\\SalesWinApp\\SalesWinApp.csproj",
         "packagesPath": "C:\\Users\\cao thi phuong thuy\\.nuget\\packages\\",
-        "outputPath": "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\SalesWinApp\\obj\\",
+        "outputPath": "D:\\asm02v2\\SalesWinApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\cao thi phuong thuy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -188,11 +188,11 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\BusinessObject\\BusinessObject.csproj"
+              "D:\\asm02v2\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "D:\\asm02v2\\BusinessObject\\BusinessObject.csproj"
               },
-              "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "E:\\TaiLieuCN\\CN5\\PRN211\\SourceCode\\Member\\Sale\\ASM02-SaleManagement\\DataAccess\\DataAccess.csproj"
+              "D:\\asm02v2\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "D:\\asm02v2\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -206,6 +206,12 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "Nancy": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
