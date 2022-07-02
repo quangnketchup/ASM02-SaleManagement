@@ -16,7 +16,6 @@ C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\Sa
 C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\SalesManagement\ThuyCTP\ASM02Solution\DataAccess\obj\Debug\net6.0\DataAccess.genruntimeconfig.cache
 C:\SEMESTER\ky5\Học chống rớt\PRN211\2_PRN211\2_PRN211\Assignments\ASM2\SalesManagement\ThuyCTP\ASM02Solution\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
 D:\New folder\SWP391\ASM02-SaleManagement\DataAccess\bin\Debug\net6.0\DataAccess.deps.json
-D:\New folder\SWP391\ASM02-SaleManagement\DataAccess\bin\Debug\net6.0\DataAccess.runtimeconfig.json
 D:\New folder\SWP391\ASM02-SaleManagement\DataAccess\bin\Debug\net6.0\DataAccess.dll
 D:\New folder\SWP391\ASM02-SaleManagement\DataAccess\bin\Debug\net6.0\DataAccess.pdb
 D:\New folder\SWP391\ASM02-SaleManagement\DataAccess\bin\Debug\net6.0\BusinessObject.dll
@@ -30,5 +29,4 @@ D:\New folder\SWP391\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\DataAccess
 D:\New folder\SWP391\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\DataAccess.dll
 D:\New folder\SWP391\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
 D:\New folder\SWP391\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\DataAccess.pdb
-D:\New folder\SWP391\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\DataAccess.genruntimeconfig.cache
 D:\New folder\SWP391\ASM02-SaleManagement\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
