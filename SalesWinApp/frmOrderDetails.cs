@@ -28,7 +28,7 @@ namespace SalesWinApp
 
         private void frmOrderDetails_Load(object sender, EventArgs e)
         {
-            if(isAdmin == false)
+            if(isAdmin == true)
             {
                 btnDelete.Enabled = false;
                 btnCreate.Enabled = false;
@@ -42,7 +42,7 @@ namespace SalesWinApp
             }
             else
             {
-                btnDelete.Enabled = false;
+                btnDelete.Enabled = true;
                 //Register this event to open the frmOrderDetail form that performs updating
                 dgvOrderDetail.CellDoubleClick += dgvOrderDetail_CellContentClick;
             }
@@ -87,15 +87,17 @@ namespace SalesWinApp
                 source.DataSource = orders.OrderByDescending(order => order.OrderId);
                 txtDiscount.DataBindings.Clear();
                 txtOrderID.DataBindings.Clear();
-                txtProductID.DataBindings.Clear();
+                txtProduct.DataBindings.Clear();
                 txtQuantity.DataBindings.Clear();
                 txtUnitPrice.DataBindings.Clear();
+                txtStatus.DataBindings.Clear();
 
                 txtDiscount.DataBindings.Add("Text", source, "Discount");
                 txtOrderID.DataBindings.Add("Text", source, "OrderId");
-                txtProductID.DataBindings.Add("Text", source, "ProductId");
+                txtProduct.DataBindings.Add("Text", source, "ProductId");
                 txtQuantity.DataBindings.Add("Text", source, "Quantity");
                 txtUnitPrice.DataBindings.Add("Text", source, "UnitPrice");
+                txtStatus.DataBindings.Add("Text", source, "Status");
 
                 dgvOrderDetail.DataSource = null;
                 dgvOrderDetail.DataSource = source;

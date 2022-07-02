@@ -28,30 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.product = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtDiscount = new System.Windows.Forms.TextBox();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.txtUnitPrice = new System.Windows.Forms.TextBox();
-            this.txtProductName = new System.Windows.Forms.TextBox();
+            this.txtProduct = new System.Windows.Forms.TextBox();
             this.txtOrderID = new System.Windows.Forms.TextBox();
             this.txtProductID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // btnDelete
+            // btnClose
             // 
-            this.btnDelete.Location = new System.Drawing.Point(684, 837);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(182, 63);
-            this.btnDelete.TabIndex = 26;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnClose.Location = new System.Drawing.Point(684, 837);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(182, 63);
+            this.btnClose.TabIndex = 26;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnSave
             // 
@@ -62,6 +63,7 @@
             this.btnSave.TabIndex = 25;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label5
             // 
@@ -93,15 +95,15 @@
             this.label3.TabIndex = 22;
             this.label3.Text = "Unit Price";
             // 
-            // label2
+            // product
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(186, 233);
-            this.label2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(209, 41);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Product Name";
+            this.product.AutoSize = true;
+            this.product.Location = new System.Drawing.Point(186, 233);
+            this.product.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.product.Name = "product";
+            this.product.Size = new System.Drawing.Size(159, 41);
+            this.product.TabIndex = 21;
+            this.product.Text = "Product ID";
             // 
             // label1
             // 
@@ -140,14 +142,14 @@
             this.txtUnitPrice.Size = new System.Drawing.Size(439, 47);
             this.txtUnitPrice.TabIndex = 16;
             // 
-            // txtProductName
+            // txtProduct
             // 
-            this.txtProductName.Location = new System.Drawing.Point(422, 225);
-            this.txtProductName.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.txtProductName.Name = "txtProductName";
-            this.txtProductName.ReadOnly = true;
-            this.txtProductName.Size = new System.Drawing.Size(439, 47);
-            this.txtProductName.TabIndex = 15;
+            this.txtProduct.Location = new System.Drawing.Point(422, 225);
+            this.txtProduct.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.txtProduct.Name = "txtProduct";
+            this.txtProduct.ReadOnly = true;
+            this.txtProduct.Size = new System.Drawing.Size(439, 47);
+            this.txtProduct.TabIndex = 15;
             // 
             // txtOrderID
             // 
@@ -171,21 +173,22 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1053, 991);
-            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.product);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDiscount);
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.txtUnitPrice);
-            this.Controls.Add(this.txtProductName);
+            this.Controls.Add(this.txtProduct);
             this.Controls.Add(this.txtOrderID);
             this.Controls.Add(this.txtProductID);
             this.Name = "frmCreateOrderDetail";
             this.Text = "CreateOrderDetail";
+            this.Load += new System.EventHandler(this.frmCreateOrderDetail_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,17 +196,17 @@
 
         #endregion
 
-        private Button btnDelete;
+        private Button btnClose;
         private Button btnSave;
         private Label label5;
         private Label label4;
         private Label label3;
-        private Label label2;
+        private Label product;
         private Label label1;
         private TextBox txtDiscount;
         private TextBox txtQuantity;
         private TextBox txtUnitPrice;
-        private TextBox txtProductName;
+        private TextBox txtProduct;
         private TextBox txtOrderID;
         private TextBox txtProductID;
     }
