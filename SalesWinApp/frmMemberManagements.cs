@@ -119,25 +119,29 @@ namespace SalesWinApp
                 {
                     source.DataSource = members.OrderByDescending(member => member.CompanyName);
                 }
-                txtMemberID.DataBindings.Clear();
-                txtCompanyName.DataBindings.Clear();
-                txtPassword.DataBindings.Clear();
-                txtEmail.DataBindings.Clear();
-                txtCountry.DataBindings.Clear();
-                txtCity.DataBindings.Clear();
-                txtStatus.DataBindings.Clear();
+                if (source.DataSource != null)
+                {
+                    txtMemberID.DataBindings.Clear();
+                    txtCompanyName.DataBindings.Clear();
+                    txtPassword.DataBindings.Clear();
+                    txtEmail.DataBindings.Clear();
+                    txtCountry.DataBindings.Clear();
+                    txtCity.DataBindings.Clear();
+                    txtStatus.DataBindings.Clear();
 
-                txtMemberID.DataBindings.Add("Text", source, "MemberId");
-                txtCompanyName.DataBindings.Add("Text", source, "CompanyName");
-                txtPassword.DataBindings.Add("Text", source, "Password");
-                txtEmail.DataBindings.Add("Text", source, "Email");
-                txtCountry.DataBindings.Add("Text", source, "Country");
-                txtCity.DataBindings.Add("Text", source, "City");
-                txtStatus.DataBindings.Add("Text", source, "Status");
+                    txtMemberID.DataBindings.Add("Text", source, "MemberId");
+                    txtCompanyName.DataBindings.Add("Text", source, "CompanyName");
+                    txtPassword.DataBindings.Add("Text", source, "Password");
+                    txtEmail.DataBindings.Add("Text", source, "Email");
+                    txtCountry.DataBindings.Add("Text", source, "Country");
+                    txtCity.DataBindings.Add("Text", source, "City");
+                    txtStatus.DataBindings.Add("Text", source, "Status");
 
 
-                dgvMemberList.DataSource = null;
-                dgvMemberList.DataSource = source;
+                    dgvMemberList.DataSource = null;
+                    dgvMemberList.DataSource = source;
+                }
+                
                 if (isAdmin == false)
                 {
                     if (members.Count() == 0)

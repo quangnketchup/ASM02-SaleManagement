@@ -17,6 +17,7 @@ namespace SalesWinApp
         public bool isAdmin { get; set; }
         IOrderRepository orderRepository = new OrderRepository();
         IOrderDetailRepository orderDetailRepository = new OrderDetailRepository();
+        public Member loginMember { get; set; }
         //Create a data source
         BindingSource source;
         public frmOrderManagements()
@@ -32,34 +33,52 @@ namespace SalesWinApp
             try
             {
                 source = new BindingSource();
-                source.DataSource = orderList.OrderByDescending(orderList => orderList.OrderId);
-                txtOrderID.DataBindings.Clear();
-                txtMemberID.DataBindings.Clear();
-                mtbOrderDate.DataBindings.Clear();
-                mtbRequiredDate.DataBindings.Clear();
-                mtbShippedDate.DataBindings.Clear();
-                txtFreight.DataBindings.Clear();
-                txtStatus.DataBindings.Clear();
-
-                txtOrderID.DataBindings.Add("Text", source, "OrderId");
-                txtMemberID.DataBindings.Add("Text", source, "MemberId");
-                mtbOrderDate.DataBindings.Add("Text", source, "OrderDate");
-                mtbRequiredDate.DataBindings.Add("Text", source, "RequireDate");
-                mtbShippedDate.DataBindings.Add("Text", source, "ShippedDate");
-                txtFreight.DataBindings.Add("Text", source, "Freight");
-                txtStatus.DataBindings.Add("Text", source, "Status");
-
-                dgvOrderList.DataSource = null;
-                dgvOrderList.DataSource = source;
-                if(isAdmin==false)
+                if (isAdmin == false)
                 {
-                    if(orderList.Count() == 0)
+                    Order order = orderList.SingleOrDefault(o => o.MemberId == loginMember.MemberId);
+                    source.DataSource = order;
+                }
+                else
+                {
+                    source.DataSource = orderList.OrderByDescending(orderList => orderList.OrderId);
+                } 
+                if(source.DataSource != null)
+                {
+                    txtOrderID.DataBindings.Clear();
+                    txtMemberID.DataBindings.Clear();
+                    mtbOrderDate.DataBindings.Clear();
+                    mtbRequiredDate.DataBindings.Clear();
+                    mtbShippedDate.DataBindings.Clear();
+                    txtFreight.DataBindings.Clear();
+                    txtStatus.DataBindings.Clear();
+
+                    txtOrderID.DataBindings.Add("Text", source, "OrderId");
+                    txtMemberID.DataBindings.Add("Text", source, "MemberId");
+                    mtbOrderDate.DataBindings.Add("Text", source, "OrderDate");
+                    mtbRequiredDate.DataBindings.Add("Text", source, "RequireDate");
+                    mtbShippedDate.DataBindings.Add("Text", source, "ShippedDate");
+                    txtFreight.DataBindings.Add("Text", source, "Freight");
+                    txtStatus.DataBindings.Add("Text", source, "Status");
+
+                    dgvOrderList.DataSource = null;
+                    dgvOrderList.DataSource = source;
+                    if (isAdmin == false)
                     {
-                        ClearText();
-                        //Set focus order Updated
-                        source.Position = source.Count - 1;
+
+                        if (orderList.Count() == 0)
+                        {
+                            ClearText();
+                            //Set focus order Updated
+                            source.Position = source.Count - 1;
+                        }
                     }
                 }
+                else {
+                    ClearText();
+                }
+
+
+                
             }
             catch (Exception ex)
             {
