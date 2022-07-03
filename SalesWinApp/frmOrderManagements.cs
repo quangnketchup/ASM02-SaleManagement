@@ -15,6 +15,7 @@ namespace SalesWinApp
     public partial class frmOrderManagements : Form
     {
         public bool isAdmin { get; set; }
+        public Member loginMember { get; set; }
         IOrderRepository orderRepository = new OrderRepository();
         IOrderDetailRepository orderDetailRepository = new OrderDetailRepository();
         //Create a data source
@@ -31,8 +32,25 @@ namespace SalesWinApp
             var orderList = orderRepository.GetOrders();
             try
             {
-                source = new BindingSource();
-                source.DataSource = orderList.OrderByDescending(orderList => orderList.OrderId);
+                if(isAdmin == false)
+                {
+                    List<Order> orders = new List<Order>();
+
+                    foreach (Order isOrderList in orderList)
+                    {
+                        if (isOrderList.MemberId==loginMember.MemberId)
+                        {
+                            orders.Add(isOrderList);
+                        }
+                    }
+                    source = new BindingSource();
+                    source.DataSource = orders;
+                }
+                else
+                {
+                    source = new BindingSource();
+                    source.DataSource = orderList.OrderByDescending(orderList => orderList.OrderId);
+                }
                 txtOrderID.DataBindings.Clear();
                 txtMemberID.DataBindings.Clear();
                 mtbOrderDate.DataBindings.Clear();
@@ -66,6 +84,7 @@ namespace SalesWinApp
                 MessageBox.Show(ex.Message, "Error on load list of order!");
             }
         }
+        
         //Clear text on TextBoxes
         private void ClearText()
         {
@@ -87,7 +106,7 @@ namespace SalesWinApp
         
         private void frmOrderManagements_Load_1(object sender, EventArgs e)
         {
-            if (isAdmin == true)
+            if (isAdmin == false)
             {
                 btnDelete.Enabled = false;
                 btnNew.Enabled = false;
@@ -100,6 +119,7 @@ namespace SalesWinApp
                 mtbRequiredDate.Enabled = false;
                 mtbShippedDate.Enabled = false;
                 txtStatus.Enabled = false;
+                dgvOrderList.CellDoubleClick += null;
             }
             else
             {
@@ -115,16 +135,16 @@ namespace SalesWinApp
             frmCreateOrder frmCreateOrder = new frmCreateOrder
             {
                 Text = "Update order",
-                InsertOrUpdate = true,
                 OrderInfor = GetOrderObject(),
                 OrderRepository = orderRepository,
-            };
-            if(frmCreateOrder.ShowDialog() == DialogResult.OK)
-            {
-                LoadOrderList();
-                //Set focus order update
-                source.Position = source.Count - 1;
-            }
+                isAdmin = this.isAdmin,
+                };
+                if (frmCreateOrder.ShowDialog() == DialogResult.OK)
+                {
+                    LoadOrderList();
+                    //Set focus order update
+                    source.Position = source.Count - 1;
+                }
         }
 
         private Order GetOrderObject()
@@ -197,7 +217,6 @@ namespace SalesWinApp
             frmCreateOrder frmCreateOrder = new frmCreateOrder
             {
                 Text = "Update order",
-                InsertOrUpdate = true,
                 OrderInfor = GetOrderObject(),
                 OrderRepository = orderRepository,
             };

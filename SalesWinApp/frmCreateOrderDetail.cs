@@ -4,9 +4,13 @@ namespace SalesWinApp
 {
     public partial class frmCreateOrderDetail : Form
     {
-        public IOrderDetailRepository OrderDetailRepository { get; set; }
+        //  public IOrderDetailRepository OrderDetailRepository { get; set; }
+        IOrderDetailRepository OrderDetailRepository = new OrderDetailRepository();
         public OrderDetail OrderDetailInfor { get; set; }
-        public IOrderRepository OrderRepository { get; set; }
+        //  public IOrderRepository OrderRepository { get; set; }
+        IOrderRepository OrderRepository = new OrderRepository();
+
+
         public Order OrderInfor { get; set; }
         public frmCreateOrderDetail()
         {
@@ -19,22 +23,16 @@ namespace SalesWinApp
         {
             try
             {
-                var orderDetail = new OrderDetail
-                {
-                    OrderId = int.Parse(txtOrderId.Text),
-                    ProductId = int.Parse(txtProductID.Text),
-                    UnitPrice = decimal.Parse(txtUnitPrice.Text),
-                    Quantity = int.Parse(txtQuantity.Text),
-                    Discount = float.Parse(txtDiscount.Text),
-                    Status = 1,
-                };
-                
+                AssignmentContext db = new AssignmentContext();
+                var mem = db.Members.SingleOrDefault(pro => pro.CompanyName.Equals(txtMemberId.SelectedItem.ToString()));
+                int id = mem.MemberId;
+
                 var order = new Order
                 {
-                    OrderId =int.Parse(txtOrderId.Text),
-                    MemberId = int.Parse(txtMemberId.Text),
+                    OrderId = int.Parse(txtOrderId.Text),
+                    MemberId = id,
                     OrderDate = DateTime.Parse(mtbOrderDate.Text),
-                    RequireDate = DateTime.Parse(mtbShippedDate.Text),
+                    RequireDate = DateTime.Parse(mtbRequiredDate.Text),
                     ShippedDate = DateTime.Parse(mtbShippedDate.Text),
                     Freight = decimal.Parse(txtFreight.Text),
                     Status = 1,
@@ -43,10 +41,27 @@ namespace SalesWinApp
                 {
                     OrderRepository.InsertOrder(order);
                 }
+
+                var product = db.Products.SingleOrDefault(pro => pro.ProductName.Equals(txtProductId.SelectedItem.ToString()));
+                int pro = product.ProductId;
+                var orderDetail = new OrderDetail
+                {
+                    OrderDetailId = int.Parse(txtOrderDetailId.Text),
+                    OrderId = int.Parse(txtOrderId.Text),
+                    ProductId = pro,
+                    UnitPrice = decimal.Parse(txtUnitPrice.Text),
+                    Quantity = int.Parse(txtQuantity.Text),
+                    Discount = float.Parse(txtDiscount.Text),
+                    Status = 1,
+
+                };
+
                 if (orderDetail != null)
                 {
                     OrderDetailRepository.InsertOrderDetail(orderDetail);
+                    Close();
                 }
+                
             }
             catch (Exception ex)
             {
@@ -56,7 +71,19 @@ namespace SalesWinApp
 
         private void frmCreateOrderDetail_Load(object sender, EventArgs e)
         {
-
+            AssignmentContext db = new AssignmentContext();
+            var member = from m in db.Members
+                         select m.CompanyName.ToString();
+            foreach (var x in member)
+            {
+                txtMemberId.Items.Add(x);
+            }
+            var product = from c in db.Products
+                          select c.ProductName.ToString();
+            foreach (var i in product)
+            {
+                txtProductId.Items.Add(i);
+            }
         }
 
         private void txtOrderId_TextChanged(object sender, EventArgs e)
