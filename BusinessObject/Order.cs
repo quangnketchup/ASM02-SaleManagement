@@ -5,11 +5,6 @@ namespace DataAccess.DataAccess
 {
     public partial class Order
     {
-        public Order()
-        {
-            OrderDetails = new HashSet<OrderDetail>();
-        }
-
         public int OrderId { get; set; }
         public int MemberId { get; set; }
         public DateTime OrderDate { get; set; }
@@ -19,6 +14,6 @@ namespace DataAccess.DataAccess
         public int Status { get; set; }
 
         public virtual Member Member { get; set; } = null!;
-        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }
+

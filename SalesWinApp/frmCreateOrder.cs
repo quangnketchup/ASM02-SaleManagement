@@ -13,7 +13,7 @@ namespace SalesWinApp
 {
     public partial class frmCreateOrder : Form
     {
-        public bool isAdmin { get; set; }
+        public bool InsertOrUpdate { get; set; }
         public Order OrderInfor { get; set; }
         public IOrderRepository OrderRepository { get; set; }
         public frmCreateOrder()
@@ -35,26 +35,26 @@ namespace SalesWinApp
                     ShippedDate = DateTime.Parse(mtbShippedDate.Text),
                     Status = 1
                 };
+                if(InsertOrUpdate == false)
+                {
+                    OrderRepository.InsertOrder(order);
+                }
+                else
+                {
                     OrderRepository.UpdateOrder(order);
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Add new order");
+                MessageBox.Show(ex.Message, InsertOrUpdate == false ? "Add new order" : "update a order");
             }
         }
 
         private void frmCreateOrder_Load(object sender, EventArgs e)
         {
-            if (isAdmin == false) //filter admin
+            txtOrderID.Enabled = !InsertOrUpdate;
+            if(InsertOrUpdate == true) //update mode
             {
-                txtOrderID.Enabled = false;
-                txtMemberId.Enabled = false;
-                txtFreight.Enabled = false;
-                mtbRequiredDate.Enabled = false;
-                mtbOrderDate.Enabled = false;
-                mtbShippedDate.Enabled = false;
-                btnSave.Enabled=false;
-            }
                 //Show member to perform updating
                 txtOrderID.Text = OrderInfor.OrderId.ToString();
                 txtMemberId.Text = OrderInfor.MemberId.ToString();
@@ -62,7 +62,7 @@ namespace SalesWinApp
                 mtbRequiredDate.Text = OrderInfor.RequireDate.ToString();
                 mtbOrderDate.Text = OrderInfor.OrderDate.ToString();
                 mtbShippedDate.Text = OrderInfor.ShippedDate.ToString();
-            
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e) => Close();
