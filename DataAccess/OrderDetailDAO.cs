@@ -7,7 +7,6 @@ namespace DataAccess
 {
     public class OrderDetailDAO
     {
-        //Using Singleton Pattern
         private static OrderDetailDAO instance = null;
         private static readonly object instanceLock = new object();
         private OrderDetailDAO() { }
@@ -58,7 +57,6 @@ namespace DataAccess
         }
 
         //-----------------------------------------------------------------
-        //Add a new member
         public void AddNew(OrderDetail OrderDetail)
         {
             try
@@ -81,7 +79,6 @@ namespace DataAccess
             }
         }
         //-----------------------------------------------------------------
-        //Add a new member
         public void Update(OrderDetail OrderDetail)
         {
             try
@@ -130,7 +127,6 @@ namespace DataAccess
         }
 
         //-----------------------------------------------------------------
-        //Add a new member
         public void Remove(int OrderId, int ProductId)
         {
             try
