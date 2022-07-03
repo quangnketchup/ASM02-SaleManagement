@@ -188,11 +188,23 @@ namespace SalesWinApp
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
-            var products = ProductRepository.GetFilteredProducts(txtFilter.Text);
+            var products = ProductRepository.GetProducts();
+            List<Product> listpro = new List<Product>();
+            foreach (var product in products)
+            {
+                if (product.ProductId.ToString().Equals(txtFilter.Text))
+                {
+                    listpro.Add(product);
+                }
+                else if (product.ProductName.ToUpper().Contains((txtFilter.Text).ToUpper()))
+                {
+                    listpro.Add(product);
+                }
+            }
             try
             {
                 Source = new BindingSource();
-                Source.DataSource = products;
+                Source.DataSource = listpro;
 
                 txtProductId.DataBindings.Clear();
                 txtCategoryId.DataBindings.Clear();
@@ -209,15 +221,15 @@ namespace SalesWinApp
                 txtUnitInStock.DataBindings.Add("Text", Source, "UnitslnStock");
 
                 dgvProductList.DataSource = null;
-                dgvProductList.DataSource = Source;
-                if (products.Count() == 0)
+                if (listpro.Count == 0)
                 {
                     ClearText();
                     btnDelete.Enabled = false;
                 }
                 else
                 {
-                    btnDelete.Enabled = true;
+                    dgvProductList.DataSource = null;
+                    dgvProductList.DataSource = Source;
                 }
             }
             catch (Exception ex)
