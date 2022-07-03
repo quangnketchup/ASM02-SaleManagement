@@ -14,6 +14,7 @@ namespace DataAccess.Repository
         void InsertOrder(Order order);
         void DeleteOrder(int OrderID);
         void UpdateOrder(Order order);
+        IEnumerable<Order> GetOrderTime(DateTime StartDate, DateTime EndDate);
 
     }
 }

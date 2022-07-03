@@ -45,7 +45,24 @@ namespace DataAccess
             return FList;
 
         }
+        public IEnumerable<Order> GetOrderTime(DateTime startime, DateTime endTime)
+        {
+            IEnumerable<Order> List = null;
+            try
+            {
+                using AssignmentContext dbContext = new AssignmentContext();
+                List = dbContext.Orders
+                    .Where(o => o.OrderDate >= startime)
+                    .Where(o => o.OrderDate <= endTime)
+                    .ToList();
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
+            return List;
+        }
         public IEnumerable<Order> GetOrderList()
         {
             var members = new List<Order>();

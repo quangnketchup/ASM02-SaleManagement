@@ -47,13 +47,18 @@
             this.mtbOrderDate = new System.Windows.Forms.TextBox();
             this.mtbRequiredDate = new System.Windows.Forms.TextBox();
             this.mtbShippedDate = new System.Windows.Forms.TextBox();
+            this.lbStartDate = new System.Windows.Forms.Label();
+            this.lbEndDate = new System.Windows.Forms.Label();
+            this.btnFind = new System.Windows.Forms.Button();
+            this.mtbFilterStartDate = new System.Windows.Forms.DateTimePicker();
+            this.mtbFilterEndDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvOrderList
             // 
             this.dgvOrderList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrderList.Location = new System.Drawing.Point(22, 560);
+            this.dgvOrderList.Location = new System.Drawing.Point(29, 624);
             this.dgvOrderList.Margin = new System.Windows.Forms.Padding(6);
             this.dgvOrderList.Name = "dgvOrderList";
             this.dgvOrderList.ReadOnly = true;
@@ -66,7 +71,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(882, 933);
+            this.btnClose.Location = new System.Drawing.Point(878, 980);
             this.btnClose.Margin = new System.Windows.Forms.Padding(6);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(200, 59);
@@ -232,11 +237,60 @@
             this.mtbShippedDate.Size = new System.Drawing.Size(501, 47);
             this.mtbShippedDate.TabIndex = 84;
             // 
+            // lbStartDate
+            // 
+            this.lbStartDate.AutoSize = true;
+            this.lbStartDate.Location = new System.Drawing.Point(178, 496);
+            this.lbStartDate.Name = "lbStartDate";
+            this.lbStartDate.Size = new System.Drawing.Size(148, 41);
+            this.lbStartDate.TabIndex = 87;
+            this.lbStartDate.Text = "Start Date";
+            // 
+            // lbEndDate
+            // 
+            this.lbEndDate.AutoSize = true;
+            this.lbEndDate.Location = new System.Drawing.Point(915, 502);
+            this.lbEndDate.Name = "lbEndDate";
+            this.lbEndDate.Size = new System.Drawing.Size(138, 41);
+            this.lbEndDate.TabIndex = 88;
+            this.lbEndDate.Text = "End Date";
+            // 
+            // btnFind
+            // 
+            this.btnFind.Location = new System.Drawing.Point(1622, 497);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(188, 58);
+            this.btnFind.TabIndex = 89;
+            this.btnFind.Text = "Find";
+            this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click_1);
+            // 
+            // mtbFilterStartDate
+            // 
+            this.mtbFilterStartDate.Location = new System.Drawing.Point(335, 496);
+            this.mtbFilterStartDate.Margin = new System.Windows.Forms.Padding(6);
+            this.mtbFilterStartDate.Name = "mtbFilterStartDate";
+            this.mtbFilterStartDate.Size = new System.Drawing.Size(527, 47);
+            this.mtbFilterStartDate.TabIndex = 90;
+            // 
+            // mtbFilterEndDate
+            // 
+            this.mtbFilterEndDate.Location = new System.Drawing.Point(1062, 501);
+            this.mtbFilterEndDate.Margin = new System.Windows.Forms.Padding(6);
+            this.mtbFilterEndDate.Name = "mtbFilterEndDate";
+            this.mtbFilterEndDate.Size = new System.Drawing.Size(527, 47);
+            this.mtbFilterEndDate.TabIndex = 91;
+            // 
             // frmOrderManagements
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1957, 1054);
+            this.Controls.Add(this.mtbFilterEndDate);
+            this.Controls.Add(this.mtbFilterStartDate);
+            this.Controls.Add(this.btnFind);
+            this.Controls.Add(this.lbEndDate);
+            this.Controls.Add(this.lbStartDate);
             this.Controls.Add(this.mtbShippedDate);
             this.Controls.Add(this.mtbRequiredDate);
             this.Controls.Add(this.mtbOrderDate);
@@ -286,5 +340,10 @@
         private TextBox mtbOrderDate;
         private TextBox mtbRequiredDate;
         private TextBox mtbShippedDate;
+        private Label lbStartDate;
+        private Label lbEndDate;
+        private Button btnFind;
+        private DateTimePicker mtbFilterStartDate;
+        private DateTimePicker mtbFilterEndDate;
     }
 }

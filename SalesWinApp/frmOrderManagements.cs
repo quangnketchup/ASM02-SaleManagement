@@ -87,10 +87,11 @@ namespace SalesWinApp
         
         private void frmOrderManagements_Load_1(object sender, EventArgs e)
         {
-            if (isAdmin == true)
+            if (isAdmin == false)
             {
                 btnDelete.Enabled = false;
                 btnNew.Enabled = false;
+                btnFind.Enabled = true;
 
                 txtFreight.Enabled = false;
                 txtMemberID.Enabled = false;
@@ -103,6 +104,7 @@ namespace SalesWinApp
             }
             else
             {
+                btnFind.Enabled = true;
                 btnDelete.Enabled = true;
                 //Register this even to open the frmOrder form that performs updating
                 dgvOrderList.CellDoubleClick += DgvOrderList_CellDoubleClick;
@@ -208,6 +210,60 @@ namespace SalesWinApp
                 source.Position = source.Count - 1;
             }
         }
+
+        private void btnFind_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                var StartDate = mtbFilterStartDate.Value;
+                var EndDate = mtbFilterEndDate.Value;
+                var list = orderRepository.GetOrderTime(StartDate, EndDate);
+                LoadOrderListTime(list);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         //--------------------------------
+
+        private void LoadOrderListTime(IEnumerable<Order> list)
+        {
+            var listOrder = list;
+            try
+            {
+                source = new BindingSource();
+                txtOrderID.DataBindings.Clear();
+                txtMemberID.DataBindings.Clear();
+                mtbOrderDate.DataBindings.Clear();
+                mtbRequiredDate.DataBindings.Clear();
+                mtbShippedDate.DataBindings.Clear();
+                txtFreight.DataBindings.Clear();
+                txtStatus.DataBindings.Clear();
+
+                txtOrderID.DataBindings.Add("Text", source, "OrderId");
+                txtMemberID.DataBindings.Add("Text", source, "MemberId");
+                mtbOrderDate.DataBindings.Add("Text", source, "OrderDate");
+                mtbRequiredDate.DataBindings.Add("Text", source, "RequireDate");
+                mtbShippedDate.DataBindings.Add("Text", source, "ShippedDate");
+                txtFreight.DataBindings.Add("Text", source, "Freight");
+                txtStatus.DataBindings.Add("Text", source, "Status");
+
+                dgvOrderList.DataSource = null;
+                dgvOrderList.DataSource = source;
+                if (isAdmin == false)
+                {
+                    {
+                        ClearText();
+                        //Set focus order Updated
+                        source.Position = source.Count - 1;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error on load list of order!");
+            }
+        }
     }
 }
