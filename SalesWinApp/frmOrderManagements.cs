@@ -16,6 +16,7 @@ namespace SalesWinApp
     {
         public bool isAdmin { get; set; }
         IOrderRepository orderRepository = new OrderRepository();
+        IOrderDetailRepository orderDetailRepository = new OrderDetailRepository();
         //Create a data source
         BindingSource source;
         public frmOrderManagements()
@@ -83,50 +84,10 @@ namespace SalesWinApp
         {
             LoadOrderList();
         }
-
-        private void LoadOrderUser()
-        {
-            var orderList = orderRepository.GetOrders();
-            try
-            {
-                source = new BindingSource();
-                source.DataSource = orderList.OrderByDescending(orderList => orderList.OrderId);
-                txtOrderID.DataBindings.Clear();
-                txtMemberID.DataBindings.Clear();
-                mtbOrderDate.DataBindings.Clear();
-                mtbRequiredDate.DataBindings.Clear();
-                mtbShippedDate.DataBindings.Clear();
-                txtFreight.DataBindings.Clear();
-                txtStatus.DataBindings.Clear();
-
-                txtOrderID.DataBindings.Add("Text", source, "OrderId");
-                txtMemberID.DataBindings.Add("Text", source, "MemberId");
-                mtbOrderDate.DataBindings.Add("Text", source, "OrderDate");
-                mtbRequiredDate.DataBindings.Add("Text", source, "RequireDate");
-                mtbShippedDate.DataBindings.Add("Text", source, "ShippedDate");
-                txtFreight.DataBindings.Add("Text", source, "Freight");
-                txtStatus.DataBindings.Add("Text", source, "Status");
-
-                dgvOrderList.DataSource = null;
-                dgvOrderList.DataSource = source;
-                if (isAdmin == false)
-                {
-                    if (orderList.Count() == 0)
-                    {
-                        ClearText();
-                        //Set focus order Updated
-                        source.Position = source.Count - 1;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error on load list of order!");
-            }
-        }
+        
         private void frmOrderManagements_Load_1(object sender, EventArgs e)
         {
-            if (isAdmin == false)
+            if (isAdmin == true)
             {
                 btnDelete.Enabled = false;
                 btnNew.Enabled = false;
@@ -156,7 +117,7 @@ namespace SalesWinApp
                 Text = "Update order",
                 InsertOrUpdate = true,
                 OrderInfor = GetOrderObject(),
-                OrderRepository = orderRepository
+                OrderRepository = orderRepository,
             };
             if(frmCreateOrder.ShowDialog() == DialogResult.OK)
             {
@@ -191,15 +152,12 @@ namespace SalesWinApp
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            frmCreateOrder frmCreateOrder = new frmCreateOrder
+            frmCreateOrderDetail frmCreateOrder = new frmCreateOrderDetail
             {
                 Text = "Add Order",
-                InsertOrUpdate = false,
-                OrderRepository = orderRepository
             }; 
             if (frmCreateOrder.ShowDialog()==DialogResult.OK)
             {
-                LoadOrderList();
                 //Set focus order inserted
                 source.Position = source.Count - 1;
             }
@@ -236,7 +194,19 @@ namespace SalesWinApp
 
         private void dgvOrderList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            frmCreateOrder frmCreateOrder = new frmCreateOrder
+            {
+                Text = "Update order",
+                InsertOrUpdate = true,
+                OrderInfor = GetOrderObject(),
+                OrderRepository = orderRepository,
+            };
+            if (frmCreateOrder.ShowDialog() == DialogResult.OK)
+            {
+                LoadOrderList();
+                //Set focus order update
+                source.Position = source.Count - 1;
+            }
         }
         //--------------------------------
     }

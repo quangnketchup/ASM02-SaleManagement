@@ -199,7 +199,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtOrderID);
             this.Name = "frmCreateOrder";
-            this.Text = "frmCreateOrder";
+            this.Text = "Update Order";
             this.Load += new System.EventHandler(this.frmCreateOrder_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
