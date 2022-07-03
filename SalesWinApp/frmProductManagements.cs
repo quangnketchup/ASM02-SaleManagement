@@ -44,7 +44,7 @@ namespace SalesWinApp
             }
             else
             {
-                btnDelete.Enabled = true;
+                btnDelete.Enabled = false;
                 dgvProductList.CellDoubleClick += dbvProductList_CellDoubleClick;
             }
         }
