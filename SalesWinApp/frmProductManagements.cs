@@ -183,8 +183,7 @@ namespace SalesWinApp
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-            Main.Show();
+            this.Close();
         }
 
         private void btnFilter_Click(object sender, EventArgs e)

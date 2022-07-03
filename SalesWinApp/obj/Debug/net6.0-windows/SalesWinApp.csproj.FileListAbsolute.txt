@@ -115,7 +115,6 @@ D:\New folder\SWP391\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\S
 D:\New folder\SWP391\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmMain.resources
 D:\New folder\SWP391\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmMemberDetails.resources
 D:\New folder\SWP391\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmMemberManagements.resources
-D:\New folder\SWP391\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmOrderDetails.resources
 D:\New folder\SWP391\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmOrderManagements.resources
 D:\New folder\SWP391\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmProductDetails.resources
 D:\New folder\SWP391\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmProductManagements.resources
