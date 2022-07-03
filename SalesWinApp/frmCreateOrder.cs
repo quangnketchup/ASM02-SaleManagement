@@ -13,8 +13,8 @@ namespace SalesWinApp
 {
     public partial class frmCreateOrder : Form
     {
-        public bool InsertOrUpdate { get; set; }
         public Order OrderInfor { get; set; }
+        public bool isAdmin { get; set; }
         public IOrderRepository OrderRepository { get; set; }
         public frmCreateOrder()
         {
@@ -23,38 +23,41 @@ namespace SalesWinApp
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            try
+            if (isAdmin == true)
             {
-                var order = new Order
+                try
                 {
-                    OrderId = int.Parse(txtOrderID.Text),
-                    MemberId = int.Parse(txtMemberId.Text),
-                    Freight = decimal.Parse(txtFreight.Text),
-                    OrderDate = DateTime.Parse(mtbOrderDate.Text),
-                    RequireDate = DateTime.Parse(mtbRequiredDate.Text),
-                    ShippedDate = DateTime.Parse(mtbShippedDate.Text),
-                    Status = 1
-                };
-                if(InsertOrUpdate == false)
-                {
-                    OrderRepository.InsertOrder(order);
+                    var order = new Order
+                    {
+                        OrderId = int.Parse(txtOrderID.Text),
+                        MemberId = int.Parse(txtMemberId.Text),
+                        Freight = decimal.Parse(txtFreight.Text),
+                        OrderDate = DateTime.Parse(mtbOrderDate.Text),
+                        RequireDate = DateTime.Parse(mtbRequiredDate.Text),
+                        ShippedDate = DateTime.Parse(mtbShippedDate.Text),
+                        Status = 1
+                    };
+                        OrderRepository.UpdateOrder(order);
                 }
-                else
+                catch (Exception ex)
                 {
-                    OrderRepository.UpdateOrder(order);
+                    MessageBox.Show(ex.Message, "Add new order");
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, InsertOrUpdate == false ? "Add new order" : "update a order");
             }
         }
 
         private void frmCreateOrder_Load(object sender, EventArgs e)
         {
-            txtOrderID.Enabled = !InsertOrUpdate;
-            if(InsertOrUpdate == true) //update mode
+            if (isAdmin == false) //filter admin
             {
+                txtOrderID.Enabled = false;
+                txtMemberId.Enabled = false;
+                txtFreight.Enabled = false;
+                mtbRequiredDate.Enabled = false;
+                mtbOrderDate.Enabled = false;
+                mtbShippedDate.Enabled = false;
+                btnSave.Enabled = false;
+            }
                 //Show member to perform updating
                 txtOrderID.Text = OrderInfor.OrderId.ToString();
                 txtMemberId.Text = OrderInfor.MemberId.ToString();
@@ -62,7 +65,6 @@ namespace SalesWinApp
                 mtbRequiredDate.Text = OrderInfor.RequireDate.ToString();
                 mtbOrderDate.Text = OrderInfor.OrderDate.ToString();
                 mtbShippedDate.Text = OrderInfor.ShippedDate.ToString();
-            }
         }
 
         private void btnClose_Click(object sender, EventArgs e) => Close();

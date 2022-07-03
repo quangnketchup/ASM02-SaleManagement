@@ -15,6 +15,7 @@ namespace SalesWinApp
     public partial class frmOrderManagements : Form
     {
         public bool isAdmin { get; set; }
+        public Member loginMember { get; set; }
         IOrderRepository orderRepository = new OrderRepository();
         IOrderDetailRepository orderDetailRepository = new OrderDetailRepository();
         public Member loginMember { get; set; }
@@ -136,12 +137,12 @@ namespace SalesWinApp
             frmCreateOrder frmCreateOrder = new frmCreateOrder
             {
                 Text = "Update order",
-                InsertOrUpdate = true,
                 OrderInfor = GetOrderObject(),
                 OrderRepository = orderRepository,
             };
             if(frmCreateOrder.ShowDialog() == DialogResult.OK)
             {
+                isAdmin = this.isAdmin;
                 LoadOrderList();
                 //Set focus order update
                 source.Position = source.Count - 1;
@@ -218,7 +219,7 @@ namespace SalesWinApp
             frmCreateOrder frmCreateOrder = new frmCreateOrder
             {
                 Text = "Update order",
-                InsertOrUpdate = true,
+                isAdmin = this.isAdmin,
                 OrderInfor = GetOrderObject(),
                 OrderRepository = orderRepository,
             };
@@ -248,10 +249,12 @@ namespace SalesWinApp
 
         private void LoadOrderListTime(IEnumerable<Order> list)
         {
+            var list0 = orderRepository.GetOrders();
             var listOrder = list;
             try
             {
                 source = new BindingSource();
+                source.DataSource = listOrder.OrderByDescending(listOrder => listOrder.OrderId);
                 txtOrderID.DataBindings.Clear();
                 txtMemberID.DataBindings.Clear();
                 mtbOrderDate.DataBindings.Clear();
