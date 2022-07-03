@@ -33,22 +33,8 @@ namespace DataAccess
         }
 
         //-----------------------
-        public IEnumerable<Product> getProductList()
-        {
-            var products = new List<Product>();
-            try
-            {
-                using var context = new AssignmentContext();
-                products = context.Products.ToList();
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.Message);
-            }
-            return products;
-        }
 
-        public IEnumerable<Product> getProductList2()
+        public IEnumerable<Product> getProductList()
         {
             var products = new List<Product>();
             List<Product> FList = new List<Product>();
@@ -133,29 +119,8 @@ namespace DataAccess
         }
 
         //-------------------------
-        public void removeProduct(int productId)
-        {
-            try
-            {
-                Product pro = getProductByID(productId);
-                if (pro != null)
-                {
-                    using var context = new AssignmentContext();
-                    context.Products.Remove(pro);
-                    context.SaveChanges();
-                }
-                else
-                {
-                    throw new Exception("The product does not already exist.");
-                }
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.Message);
-            }
-        }
 
-        public void Remove2(int productId)
+        public void Remove(int productId)
         {
             try
             {
