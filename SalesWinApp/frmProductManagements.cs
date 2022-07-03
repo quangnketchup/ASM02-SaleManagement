@@ -28,10 +28,26 @@ namespace SalesWinApp
 
         private void frmProductManagement_Load(object sender, EventArgs e)
         {
-            btnDelete.Enabled = false;
-            dgvProductList.CellDoubleClick += dbvProductList_CellDoubleClick;
-        }
+            if (isAdmin == false)
+            {
+                btnDelete.Enabled = false;
+                btnNew.Enabled = false;
 
+                txtCategoryId.Enabled = false;
+                txtProductId.Enabled = false;
+                txtProductName.Enabled = false;
+
+                txtWeight.Enabled = false;
+                txtUnitPrice.Enabled = false;
+                txtUnitInStock.Enabled = false;
+                txtStatus.Enabled = false;
+            }
+            else
+            {
+                btnDelete.Enabled = true;
+                dgvProductList.CellDoubleClick += dbvProductList_CellDoubleClick;
+            }
+        }
 
         private void dbvProductList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {

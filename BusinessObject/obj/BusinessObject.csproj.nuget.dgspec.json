@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bao\\Downloads\\summer2022\\PRN201\\ASM02-SaleManagement\\BusinessObject\\BusinessObject.csproj": {}
+    "D:\\New folder\\SWP391\\ASM02-SaleManagement\\BusinessObject\\BusinessObject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bao\\Downloads\\summer2022\\PRN201\\ASM02-SaleManagement\\BusinessObject\\BusinessObject.csproj": {
+    "D:\\New folder\\SWP391\\ASM02-SaleManagement\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bao\\Downloads\\summer2022\\PRN201\\ASM02-SaleManagement\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "D:\\New folder\\SWP391\\ASM02-SaleManagement\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "C:\\Users\\Bao\\Downloads\\summer2022\\PRN201\\ASM02-SaleManagement\\BusinessObject\\BusinessObject.csproj",
-        "packagesPath": "C:\\Users\\Bao\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bao\\Downloads\\summer2022\\PRN201\\ASM02-SaleManagement\\BusinessObject\\obj\\",
+        "projectPath": "D:\\New folder\\SWP391\\ASM02-SaleManagement\\BusinessObject\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\Admins\\.nuget\\packages\\",
+        "outputPath": "D:\\New folder\\SWP391\\ASM02-SaleManagement\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Bao\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admins\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,6 +44,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.6, )"
@@ -76,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -149,3 +149,13 @@ C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\SalesWinApp\obj\De
 C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.dll
 C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\refint\SalesWinApp.dll
 C:\Users\Bao\Downloads\summer2022\PRN201\ASM02-SaleManagement\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.pdb
+D:\New folder\SWP391\ASM02-SaleManagement\SalesWinApp\bin\Debug\net6.0-windows\appsettings.json
+D:\New folder\SWP391\ASM02-SaleManagement\SalesWinApp\bin\Debug\net6.0-windows\Azure.Core.dll
+D:\New folder\SWP391\ASM02-SaleManagement\SalesWinApp\bin\Debug\net6.0-windows\Azure.Identity.dll
+D:\New folder\SWP391\ASM02-SaleManagement\SalesWinApp\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+D:\New folder\SWP391\ASM02-SaleManagement\SalesWinApp\bin\Debug\net6.0-windows\Microsoft.DotNet.PlatformAbstractions.dll
+D:\New folder\SWP391\ASM02-SaleManagement\SalesWinApp\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyModel.dll
+D:\New folder\SWP391\ASM02-SaleManagement\SalesWinApp\bin\Debug\net6.0-windows\Microsoft.Extensions.PlatformAbstractions.dll
+D:\New folder\SWP391\ASM02-SaleManagement\SalesWinApp\bin\Debug\net6.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\New folder\SWP391\ASM02-SaleManagement\SalesWinApp\bin\Debug\net6.0-windows\Nancy.dll
+D:\New folder\SWP391\ASM02-SaleManagement\SalesWinApp\bin\Debug\net6.0-windows\Newtonsoft.Json.dll

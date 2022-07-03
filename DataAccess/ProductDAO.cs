@@ -48,6 +48,27 @@ namespace DataAccess
             return products;
         }
 
+        public IEnumerable<Product> getProductList2()
+        {
+            var products = new List<Product>();
+            List<Product> FList = new List<Product>();
+            try
+            {
+                using var context = new AssignmentContext();
+                products = context.Products.ToList();
+                for (int i = 1; i <= products.Count; i++)
+                {
+                    if (products[i - 1].Status == 1) { FList.Add(products[i - 1]); }
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return FList;
+
+        }
 
         //-----------------------
         public Product getProductByID(int ProductId)
@@ -56,7 +77,7 @@ namespace DataAccess
             try
             {
                 using var context = new AssignmentContext();
-                product = context.Products.SingleOrDefault(c => c.ProductId == ProductId);
+                product = context.Products.SingleOrDefault(p => p.ProductId == ProductId);
             }
             catch (Exception e)
             {
@@ -134,6 +155,30 @@ namespace DataAccess
             }
         }
 
+        public void Remove2(int productId)
+        {
+            try
+            {
+                Product pro = getProductByID(productId);
+                if (pro != null)
+                {
+                    using (AssignmentContext db = new AssignmentContext())
+                    {
+                        Product product = db.Products.Where(d => d.ProductId == productId).First();
+                        product.Status = 0;
+                        db.SaveChanges();
+                    }
+                }
+                else
+                {
+                    throw new Exception("The product does not already exist.");
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
         //filter the product list
         public List<Product> GetFilteredProduct(String tag)
         {
