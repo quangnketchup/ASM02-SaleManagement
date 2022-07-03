@@ -72,7 +72,10 @@ namespace SalesWinApp
 
         private void frmMain_Load(object sender, System.EventArgs e)
         {
-
+            if (isAdmin == false)
+            {
+                productToolStripMenuItem.Enabled = false;
+            }
         }
 
     }

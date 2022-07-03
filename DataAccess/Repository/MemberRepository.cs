@@ -9,11 +9,10 @@ namespace DataAccess.Repository
 {
     public class MemberRepository : IMemberRepository
     {
-        public IEnumerable<Member> GetMembers() => MemberDAO.Instance.GetMemberList2();
+        public IEnumerable<Member> GetMembers() => MemberDAO.Instance.GetMemberList();
         public Member GetMemberByID(int MemberID) => MemberDAO.Instance.GetMemberByID(MemberID);
         public void InsertMember(Member member) => MemberDAO.Instance.AddNew(member);
-        public void DeleteMember(int MemberID) => MemberDAO.Instance.Remove2(MemberID);
-        public void UpdateMember(Member member) => MemberDAO.Instance.Update(member);
-        public List<Member> GetMemberByCityAndCountry(string city, string country) => MemberDAO.Instance.GetMemberByCityAndCountry(city, country);
+        public void DeleteMember(int MemberID) => MemberDAO.Instance.Remove(MemberID);
+        public void UpdateMember(Member member) => MemberDAO.Instance.Update(member);     
     }
 }
