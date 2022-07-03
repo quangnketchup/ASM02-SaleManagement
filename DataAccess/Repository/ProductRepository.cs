@@ -12,11 +12,11 @@ namespace DataAccess.Repository
         public IEnumerable<Product> GetFilteredProducts(string tag) => ProductDAO.Instance.GetFilteredProduct(tag);
         public Product GetProductById(int productId) => ProductDAO.Instance.getProductByID(productId);
 
-        public IEnumerable<Product> GetProducts() => ProductDAO.Instance.getProductList2();
+        public IEnumerable<Product> GetProducts() => ProductDAO.Instance.getProductList();
 
         public void InsertProduct(Product product) => ProductDAO.Instance.addNewProduct(product);
 
-        public void RemoveProduct(int productId) => ProductDAO.Instance.Remove2(productId);
+        public void RemoveProduct(int productId) => ProductDAO.Instance.Remove(productId);
 
         public void UpdateProduct(Product product) => ProductDAO.Instance.updateProduct(product);
     }
