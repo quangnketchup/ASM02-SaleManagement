@@ -13,7 +13,7 @@ namespace DataAccess
     public class ProductDAO
     {
         //-----------------------
-        //using singleton
+
         private static ProductDAO instance = null;
         private static readonly object instanceLock = new object();
         private ProductDAO() { }
@@ -132,7 +132,7 @@ namespace DataAccess
             }
         }
 
-        //-------------------------God help me
+        //-------------------------
         public void removeProduct(int productId)
         {
             try
@@ -179,7 +179,7 @@ namespace DataAccess
                 throw new Exception(e.Message);
             }
         }
-        //filter the product list
+
         public List<Product> GetFilteredProduct(String tag)
         {
             List<Product> filtered = new List<Product>();
