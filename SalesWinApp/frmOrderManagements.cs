@@ -18,7 +18,6 @@ namespace SalesWinApp
         public Member loginMember { get; set; }
         IOrderRepository orderRepository = new OrderRepository();
         IOrderDetailRepository orderDetailRepository = new OrderDetailRepository();
-        public Member loginMember { get; set; }
         //Create a data source
         BindingSource source;
         public frmOrderManagements()
@@ -36,8 +35,15 @@ namespace SalesWinApp
                 source = new BindingSource();
                 if (isAdmin == false)
                 {
-                    Order order = orderList.SingleOrDefault(o => o.MemberId == loginMember.MemberId);
-                    source.DataSource = order;
+                    List<Order> orders = new List<Order>();
+                    foreach (Order order in orderList)
+                    {
+                        if(order.MemberId == loginMember.MemberId)
+                        {
+                            orders.Add(order);
+                        }
+                    }
+                    source.DataSource = orders;
                 }
                 else
                 {
@@ -249,36 +255,54 @@ namespace SalesWinApp
 
         private void LoadOrderListTime(IEnumerable<Order> list)
         {
-            var list0 = orderRepository.GetOrders();
             var listOrder = list;
             try
             {
+
                 source = new BindingSource();
-                source.DataSource = listOrder.OrderByDescending(listOrder => listOrder.OrderId);
-                txtOrderID.DataBindings.Clear();
-                txtMemberID.DataBindings.Clear();
-                mtbOrderDate.DataBindings.Clear();
-                mtbRequiredDate.DataBindings.Clear();
-                mtbShippedDate.DataBindings.Clear();
-                txtFreight.DataBindings.Clear();
-                txtStatus.DataBindings.Clear();
-
-                txtOrderID.DataBindings.Add("Text", source, "OrderId");
-                txtMemberID.DataBindings.Add("Text", source, "MemberId");
-                mtbOrderDate.DataBindings.Add("Text", source, "OrderDate");
-                mtbRequiredDate.DataBindings.Add("Text", source, "RequireDate");
-                mtbShippedDate.DataBindings.Add("Text", source, "ShippedDate");
-                txtFreight.DataBindings.Add("Text", source, "Freight");
-                txtStatus.DataBindings.Add("Text", source, "Status");
-
-                dgvOrderList.DataSource = null;
-                dgvOrderList.DataSource = source;
                 if (isAdmin == false)
                 {
+                    List<Order> orders = new List<Order>();
+                    foreach (Order order in listOrder)
                     {
-                        ClearText();
-                        //Set focus order Updated
-                        source.Position = source.Count - 1;
+                        if (order.MemberId == loginMember.MemberId)
+                        {
+                            orders.Add(order);
+                        }
+                    }
+                    source.DataSource = orders;
+                }
+                else
+                {
+                    source.DataSource = listOrder.OrderByDescending(listOrder => listOrder.OrderId);
+                }
+                if (source.DataSource != null)
+                {
+                    txtOrderID.DataBindings.Clear();
+                    txtMemberID.DataBindings.Clear();
+                    mtbOrderDate.DataBindings.Clear();
+                    mtbRequiredDate.DataBindings.Clear();
+                    mtbShippedDate.DataBindings.Clear();
+                    txtFreight.DataBindings.Clear();
+                    txtStatus.DataBindings.Clear();
+
+                    txtOrderID.DataBindings.Add("Text", source, "OrderId");
+                    txtMemberID.DataBindings.Add("Text", source, "MemberId");
+                    mtbOrderDate.DataBindings.Add("Text", source, "OrderDate");
+                    mtbRequiredDate.DataBindings.Add("Text", source, "RequireDate");
+                    mtbShippedDate.DataBindings.Add("Text", source, "ShippedDate");
+                    txtFreight.DataBindings.Add("Text", source, "Freight");
+                    txtStatus.DataBindings.Add("Text", source, "Status");
+
+                    dgvOrderList.DataSource = null;
+                    dgvOrderList.DataSource = source;
+                    if (isAdmin == false)
+                    {
+                        {
+                            ClearText();
+                            //Set focus order Updated
+                            source.Position = source.Count - 1;
+                        }
                     }
                 }
             }
