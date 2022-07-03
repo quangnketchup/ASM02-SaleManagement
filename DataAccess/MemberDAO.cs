@@ -7,7 +7,7 @@ namespace DataAccess
 {
     public class MemberDAO
     {
-        //Using Singleton Pattern
+        
         private static MemberDAO instance = null;
         private static readonly object instanceLock = new object();
         private MemberDAO() { }
@@ -25,24 +25,7 @@ namespace DataAccess
                 }
             }
         }
-
         public IEnumerable<Member> GetMemberList()
-        {
-            var members = new List<Member>();
-            try
-            {
-                using var context = new AssignmentContext();
-                members = context.Members.ToList();
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.Message);
-            }
-            return members;
-
-        }
-
-        public IEnumerable<Member> GetMemberList2()
         {
             var members = new List<Member>();
             List<Member> FList = new List<Member>();
@@ -70,6 +53,7 @@ namespace DataAccess
             try
             {
                 using var context = new AssignmentContext();
+
                 mem = context.Members.SingleOrDefault(m=>m.MemberId==MemberID);
             }
             catch (Exception e)
@@ -79,8 +63,7 @@ namespace DataAccess
             return mem;
         }
 
-        //-----------------------------------------------------------------
-        //Add a new member
+        
         public void AddNew(Member member)
         {
             try
@@ -102,9 +85,12 @@ namespace DataAccess
                 throw new Exception(e.Message);
             }
         }
-        //-----------------------------------------------------------------
+      
+
+
         public void Update(Member member)
         {
+
             try
             {
                 Member mem = GetMemberByID(member.MemberId);
@@ -125,30 +111,9 @@ namespace DataAccess
             }
         }
 
-        //-----------------------------------------------------------------
+       
+        
         public void Remove(int MemberId)
-        {
-            try
-            {
-                Member mem = GetMemberByID(MemberId);
-                if (mem != null)
-                {
-                    using var context = new AssignmentContext();
-                    context.Members.Remove(mem);
-                    context.SaveChanges();
-                }
-                else
-                {
-                    throw new Exception("The member does not already exist.");
-                }
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.Message);
-            }
-        }
-
-        public void Remove2(int MemberId)
         {
             try
             {
@@ -173,25 +138,6 @@ namespace DataAccess
             }
         }
 
-        public List<Member> GetMemberByCityAndCountry(string city, string country)
-        {
-            List<Member> FList = new List<Member>();
-            var members = new List<Member>();
-            try
-            {
-                using var context = new AssignmentContext();
-                members = context.Members.ToList();
-                for (int i = 1; i <= members.Count; i++)
-                {
-                    if (members[i - 1].City == city && members[i - 1].Country == country) { FList.Add(members[i - 1]); }
-                }
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.Message);
-            }
-           
-            return FList;
-        }
+        
     }
 }
