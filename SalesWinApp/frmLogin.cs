@@ -19,19 +19,14 @@ namespace SalesWinApp
         private void btnLog_Click(object sender, EventArgs e)
         {
             string json = string.Empty;
-
-            // read json string from file
             using (StreamReader reader = new StreamReader("appsettings.json"))
             {
                 json = reader.ReadToEnd();
             }
-
             JavaScriptSerializer jss = new JavaScriptSerializer();
 
-            // convert json string to dynamic type
             var obj = jss.Deserialize<dynamic>(json);
 
-            // get contents
             string Email = obj["DefaultAccount"]["Email"];
             string Password = obj["DefaultAccount"]["password"];
             bool isMem = false;
@@ -48,8 +43,6 @@ namespace SalesWinApp
                 this.Close();
 
             }
-
-            // add employees to richtextbox
 
             var members = memberRepository.GetMembers();
 
@@ -81,7 +74,6 @@ namespace SalesWinApp
 
             }
         }
-
         private void btnCancel_Click(object sender, EventArgs e) => this.Close();
 
     }

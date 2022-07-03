@@ -35,17 +35,26 @@
             this.label3 = new System.Windows.Forms.Label();
             this.product = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtDiscount = new System.Windows.Forms.TextBox();
-            this.txtQuantity = new System.Windows.Forms.TextBox();
-            this.txtUnitPrice = new System.Windows.Forms.TextBox();
-            this.txtProduct = new System.Windows.Forms.TextBox();
-            this.txtOrderID = new System.Windows.Forms.TextBox();
+            this.txtMemberId = new System.Windows.Forms.TextBox();
+            this.mtbShippedDate = new System.Windows.Forms.MaskedTextBox();
+            this.mtbRequiredDate = new System.Windows.Forms.MaskedTextBox();
+            this.mtbOrderDate = new System.Windows.Forms.MaskedTextBox();
+            this.txtFreight = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lbMember = new System.Windows.Forms.Label();
+            this.txtOrderId = new System.Windows.Forms.TextBox();
             this.txtProductID = new System.Windows.Forms.TextBox();
+            this.txtUnitPrice = new System.Windows.Forms.TextBox();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
+            this.txtDiscount = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(684, 837);
+            this.btnClose.Location = new System.Drawing.Point(1224, 869);
             this.btnClose.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(182, 63);
@@ -56,7 +65,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(186, 837);
+            this.btnSave.Location = new System.Drawing.Point(726, 869);
             this.btnSave.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(182, 63);
@@ -115,64 +124,158 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "Order ID";
             // 
-            // txtDiscount
+            // txtMemberId
             // 
-            this.txtDiscount.Location = new System.Drawing.Point(422, 635);
-            this.txtDiscount.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.txtDiscount.Name = "txtDiscount";
-            this.txtDiscount.ReadOnly = true;
-            this.txtDiscount.Size = new System.Drawing.Size(439, 47);
-            this.txtDiscount.TabIndex = 18;
+            this.txtMemberId.Location = new System.Drawing.Point(1274, 99);
+            this.txtMemberId.Name = "txtMemberId";
+            this.txtMemberId.Size = new System.Drawing.Size(495, 47);
+            this.txtMemberId.TabIndex = 88;
             // 
-            // txtQuantity
+            // mtbShippedDate
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(422, 498);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.ReadOnly = true;
-            this.txtQuantity.Size = new System.Drawing.Size(439, 47);
-            this.txtQuantity.TabIndex = 17;
+            this.mtbShippedDate.BackColor = System.Drawing.SystemColors.Window;
+            this.mtbShippedDate.Location = new System.Drawing.Point(1274, 479);
+            this.mtbShippedDate.Mask = "00/00/0000";
+            this.mtbShippedDate.Name = "mtbShippedDate";
+            this.mtbShippedDate.Size = new System.Drawing.Size(495, 47);
+            this.mtbShippedDate.TabIndex = 87;
+            this.mtbShippedDate.ValidatingType = typeof(System.DateTime);
             // 
-            // txtUnitPrice
+            // mtbRequiredDate
             // 
-            this.txtUnitPrice.Location = new System.Drawing.Point(422, 359);
-            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.txtUnitPrice.Name = "txtUnitPrice";
-            this.txtUnitPrice.ReadOnly = true;
-            this.txtUnitPrice.Size = new System.Drawing.Size(439, 47);
-            this.txtUnitPrice.TabIndex = 16;
+            this.mtbRequiredDate.BackColor = System.Drawing.SystemColors.Window;
+            this.mtbRequiredDate.Location = new System.Drawing.Point(1274, 356);
+            this.mtbRequiredDate.Mask = "00/00/0000";
+            this.mtbRequiredDate.Name = "mtbRequiredDate";
+            this.mtbRequiredDate.Size = new System.Drawing.Size(495, 47);
+            this.mtbRequiredDate.TabIndex = 86;
+            this.mtbRequiredDate.ValidatingType = typeof(System.DateTime);
             // 
-            // txtProduct
+            // mtbOrderDate
             // 
-            this.txtProduct.Location = new System.Drawing.Point(422, 225);
-            this.txtProduct.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.txtProduct.Name = "txtProduct";
-            this.txtProduct.ReadOnly = true;
-            this.txtProduct.Size = new System.Drawing.Size(439, 47);
-            this.txtProduct.TabIndex = 15;
+            this.mtbOrderDate.BackColor = System.Drawing.SystemColors.Window;
+            this.mtbOrderDate.Location = new System.Drawing.Point(1274, 227);
+            this.mtbOrderDate.Mask = "00/00/0000";
+            this.mtbOrderDate.Name = "mtbOrderDate";
+            this.mtbOrderDate.Size = new System.Drawing.Size(495, 47);
+            this.mtbOrderDate.TabIndex = 85;
+            this.mtbOrderDate.ValidatingType = typeof(System.DateTime);
             // 
-            // txtOrderID
+            // txtFreight
             // 
-            this.txtOrderID.Location = new System.Drawing.Point(422, 91);
-            this.txtOrderID.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.txtOrderID.Name = "txtOrderID";
-            this.txtOrderID.ReadOnly = true;
-            this.txtOrderID.Size = new System.Drawing.Size(439, 47);
-            this.txtOrderID.TabIndex = 14;
+            this.txtFreight.Location = new System.Drawing.Point(1274, 594);
+            this.txtFreight.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.txtFreight.Name = "txtFreight";
+            this.txtFreight.Size = new System.Drawing.Size(495, 47);
+            this.txtFreight.TabIndex = 84;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(960, 602);
+            this.label10.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(111, 41);
+            this.label10.TabIndex = 83;
+            this.label10.Text = "Freight";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(960, 479);
+            this.label9.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(198, 41);
+            this.label9.TabIndex = 82;
+            this.label9.Text = "Shipped Date";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(960, 356);
+            this.label8.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(207, 41);
+            this.label8.TabIndex = 81;
+            this.label8.Text = "Required Date";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(960, 233);
+            this.label7.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(165, 41);
+            this.label7.TabIndex = 80;
+            this.label7.Text = "Order Date";
+            // 
+            // lbMember
+            // 
+            this.lbMember.AutoSize = true;
+            this.lbMember.Location = new System.Drawing.Point(960, 99);
+            this.lbMember.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.lbMember.Name = "lbMember";
+            this.lbMember.Size = new System.Drawing.Size(168, 41);
+            this.lbMember.TabIndex = 79;
+            this.lbMember.Text = "Member ID";
+            // 
+            // txtOrderId
+            // 
+            this.txtOrderId.Location = new System.Drawing.Point(422, 99);
+            this.txtOrderId.Name = "txtOrderId";
+            this.txtOrderId.Size = new System.Drawing.Size(439, 47);
+            this.txtOrderId.TabIndex = 89;
+            this.txtOrderId.TextChanged += new System.EventHandler(this.txtOrderId_TextChanged);
             // 
             // txtProductID
             // 
-            this.txtProductID.Location = new System.Drawing.Point(422, 635);
-            this.txtProductID.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.txtProductID.Location = new System.Drawing.Point(422, 227);
             this.txtProductID.Name = "txtProductID";
-            this.txtProductID.Size = new System.Drawing.Size(237, 47);
-            this.txtProductID.TabIndex = 19;
+            this.txtProductID.Size = new System.Drawing.Size(439, 47);
+            this.txtProductID.TabIndex = 90;
+            // 
+            // txtUnitPrice
+            // 
+            this.txtUnitPrice.Location = new System.Drawing.Point(422, 356);
+            this.txtUnitPrice.Name = "txtUnitPrice";
+            this.txtUnitPrice.Size = new System.Drawing.Size(439, 47);
+            this.txtUnitPrice.TabIndex = 91;
+            // 
+            // txtQuantity
+            // 
+            this.txtQuantity.Location = new System.Drawing.Point(422, 506);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(439, 47);
+            this.txtQuantity.TabIndex = 92;
+            // 
+            // txtDiscount
+            // 
+            this.txtDiscount.Location = new System.Drawing.Point(422, 640);
+            this.txtDiscount.Name = "txtDiscount";
+            this.txtDiscount.Size = new System.Drawing.Size(439, 47);
+            this.txtDiscount.TabIndex = 93;
             // 
             // frmCreateOrderDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1053, 991);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1993, 1551);
+            this.Controls.Add(this.txtDiscount);
+            this.Controls.Add(this.txtQuantity);
+            this.Controls.Add(this.txtUnitPrice);
+            this.Controls.Add(this.txtProductID);
+            this.Controls.Add(this.txtOrderId);
+            this.Controls.Add(this.txtMemberId);
+            this.Controls.Add(this.mtbShippedDate);
+            this.Controls.Add(this.mtbRequiredDate);
+            this.Controls.Add(this.mtbOrderDate);
+            this.Controls.Add(this.txtFreight);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lbMember);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label5);
@@ -180,14 +283,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.product);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtDiscount);
-            this.Controls.Add(this.txtQuantity);
-            this.Controls.Add(this.txtUnitPrice);
-            this.Controls.Add(this.txtProduct);
-            this.Controls.Add(this.txtOrderID);
-            this.Controls.Add(this.txtProductID);
             this.Name = "frmCreateOrderDetail";
-            this.Text = "CreateOrderDetail";
+            this.Text = "Create Order";
             this.Load += new System.EventHandler(this.frmCreateOrderDetail_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -203,11 +300,20 @@
         private Label label3;
         private Label product;
         private Label label1;
-        private TextBox txtDiscount;
-        private TextBox txtQuantity;
-        private TextBox txtUnitPrice;
-        private TextBox txtProduct;
-        private TextBox txtOrderID;
+        private TextBox txtMemberId;
+        private MaskedTextBox mtbShippedDate;
+        private MaskedTextBox mtbRequiredDate;
+        private MaskedTextBox mtbOrderDate;
+        private TextBox txtFreight;
+        private Label label10;
+        private Label label9;
+        private Label label8;
+        private Label label7;
+        private Label lbMember;
+        private TextBox txtOrderId;
         private TextBox txtProductID;
+        private TextBox txtUnitPrice;
+        private TextBox txtQuantity;
+        private TextBox txtDiscount;
     }
 }

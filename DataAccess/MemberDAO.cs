@@ -103,7 +103,6 @@ namespace DataAccess
             }
         }
         //-----------------------------------------------------------------
-        //Add a new member
         public void Update(Member member)
         {
             try
@@ -127,7 +126,6 @@ namespace DataAccess
         }
 
         //-----------------------------------------------------------------
-        //Add a new member
         public void Remove(int MemberId)
         {
             try
